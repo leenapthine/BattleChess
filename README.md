@@ -14,7 +14,6 @@ Artwork and design we're handled on my own and are harken back to the dungeon pi
 * [Installation and Running the Game](#Inst)
 * [Contents](#Cont)
 * [Screenshots](#SS)
-* [Unique Pieces](#Uni)
 
 ## Features
 <a name="Feat"></a>
@@ -59,5 +58,12 @@ git clone https://github.com/NeddTheRedd/BattleChess
 ## Screen Shots
 <a name="SS"></a>
 
-## Unique Pieces
-<a name="Uni"></a>
+### Main Menu
+<img width="638" alt="Screen Shot 2024-06-23 at 11 33 46 AM" src="https://github.com/NeddTheRedd/BattleChess/assets/153869055/f1758474-df22-4e7f-b67b-d7fbd55d40c4"><br>
+### Select Your Army
+<img width="638" alt="Screen Shot 2024-06-23 at 11 34 09 AM" src="https://github.com/NeddTheRedd/BattleChess/assets/153869055/4d6a48a5-0533-4feb-b7d0-2bc61d9cb15a"><br>
+### Game Play 1
+<img width="640" alt="Screen Shot 2024-06-23 at 11 35 07 AM" src="https://github.com/NeddTheRedd/BattleChess/assets/153869055/c6bb46c0-6e58-4eca-8866-af3e5dfa20c3"><br>
+### Game Play 2
+<img width="641" alt="Screen Shot 2024-06-23 at 11 37 29 AM" src="https://github.com/NeddTheRedd/BattleChess/assets/153869055/6417539f-ee87-4faa-979d-1d4f296361cb">
+
