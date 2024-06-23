@@ -5,22 +5,25 @@ Battle Chess is a strategy game developed in C++ using the SFML library. The gam
 # Objective
 
 # Table of Contents
-[Features]
-[Prerequisites]
-[Installation and Running the Game]
-[Contents]
+* [Features](#Feat)
+* [Prerequisites](#Pre)
+* [Installation and Running the Game](#Inst)
+* [Contents](#Cont)
 
 ## Features
+<a name="Feat"></a>
 - Unique chess pieces with special abilities
 - Interactive GUI built with SFML
 - Dynamic game mechanics
 
 ## Prerequisites
+<a name="Pre"></a>
 - C++ compiler (e.g., g++)
 - CMake
 - SFML library
 
 ## Installation and Running the Game
+<a name="Inst"></a>
 
 ### Clone the Repository
 First, clone the repository to your local machine:
@@ -36,6 +39,7 @@ git clone https://github.com/NeddTheRedd/BattleChess
 ./ChessGUI
 
 ## Contents
+<a name="Cont"></a>
 | Directory/File | Description |
 | ----------------------------------------------- | --------------- |
 | BattleChess/ | |
