@@ -28,11 +28,12 @@ git clone https://github.com/NeddTheRedd/BattleChess
 ./ChessGUI
 
 ## Contents
-| --- | ---|
-|BattleChess/ | |<br>
-|├── src/ | Source files |<br>
-|├── include/ | Header files |<br>
-|├── assets/ | Game assets (e.g., textures, sounds) |<br>
-|├── build/ | Build directory |<br>
-|├── CMakeLists.txt | CMake configuration file |<br>
-|└── README.md | This file |<br>
+| Directory/File | Description |
+| ----------------------------------------------- | --------------- |
+| BattleChess/ | |
+| src/ | Source files |
+| include/ | Header files |
+| assets/ | Game assets (e.g., textures, sounds) |
+| build/ | Build directory |
+| CMakeLists.txt | CMake configuration file |
+| README.md | This file |
