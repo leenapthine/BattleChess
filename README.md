@@ -16,7 +16,7 @@ Battle Chess is a strategy game developed in C++ using the SFML library. The gam
 
 ### Clone the Repository
 First, clone the repository to your local machine:
-git clone https://github.com/NeddTheRedd/BattleChess.git
+git clone https://github.com/NeddTheRedd/BattleChess
 
 ### In the Terminal
 - cd BattleChess
