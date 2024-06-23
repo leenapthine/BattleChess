@@ -1,10 +1,10 @@
-# BattleChess
+# ♟️ BattleChess
 
 Battle Chess is a strategy game developed in C++ using the SFML library. The game features various classes and files to represent chess pieces and game mechanics.
 
-# Objective
+## Objective
 
-# Table of Contents
+## Table of Contents
 * [Features](#Feat)
 * [Prerequisites](#Pre)
 * [Installation and Running the Game](#Inst)
