@@ -1,0 +1,3 @@
+/Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles/ChessGUI.dir
+/Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles/edit_cache.dir
+/Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles/rebuild_cache.dir

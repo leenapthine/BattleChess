@@ -1,0 +1,122 @@
+[
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/main.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/main.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/main.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/square.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/square.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/square.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/square.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/rook.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/rook.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/rook.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/rook.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/globals.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/globals.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/globals.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/globals.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/utility.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/utility.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/utility.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/utility.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/bishop.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/bishop.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/bishop.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/bishop.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/pawn.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/pawn.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/pawn.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/pawn.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/knight.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/knight.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/knight.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/knight.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/king.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/king.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/king.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/king.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/queen.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/queen.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/queen.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/queen.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/menu.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/menu.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/menu.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/menu.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/game.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/game.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/game.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/game.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/button.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/button.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/button.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/button.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/wizard.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/wizard.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/wizard.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/wizard.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/necromancer.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/necromancer.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/necromancer.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/necromancer.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/beastKnight.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/beastKnight.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/beastKnight.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/beastKnight.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/necroPawn.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/necroPawn.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/necroPawn.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/necroPawn.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/boulderThrower.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/boulderThrower.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/boulderThrower.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/boulderThrower.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/howler.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/howler.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/howler.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/howler.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/prowler.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/prowler.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/prowler.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/prowler.cpp.o"
+}
+]
