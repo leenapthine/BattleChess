@@ -1,8 +1,10 @@
 #include "game.h"
 #include "wizard.h"
+#include "youngWiz.h"
 #include "necromancer.h"
 #include "pawn.h"
 #include "necroPawn.h"
+#include "hellPawn.h"
 #include "boulderThrower.h"
 #include "howler.h"
 #include "utility.h"
@@ -171,37 +173,21 @@ void runChessGame(sf::RenderWindow &window)
 
                                 if (targetPiece && targetPiece != selectedPiece)
                                 {
-                                    if (selectedPiece->getType() == "Wizard")
-                                    {
-                                        // Wizard captures without moving
-                                        Wizard *wizard = static_cast<Wizard *>(selectedPiece);
-                                        wizard->capture(targetPosition, pieces);
-                                    }
+                                    selectedPiece->capture(targetPosition, pieces);
 
-                                    else if (selectedPiece->getType() == "BoulderThrower")
+                                    if (selectedPiece->getType() == "Necromancer")
                                     {
-                                        // BoulderThrower captures without moving
-                                        BoulderThrower *boulderThrower = static_cast<BoulderThrower *>(selectedPiece);
-                                        boulderThrower->capture(targetPosition, pieces);
-                                    }
-                                    else
-                                    {
-                                        selectedPiece->capture(targetPosition, pieces);
-
-                                        if (selectedPiece->getType() == "Necromancer")
+                                        // Clear highlights before entering raiseDead
+                                        for (int r = 0; r < BOARD_SIZE; ++r)
                                         {
-                                            // Clear highlights before entering raiseDead
-                                            for (int r = 0; r < BOARD_SIZE; ++r)
+                                            for (int c = 0; c < BOARD_SIZE; ++c)
                                             {
-                                                for (int c = 0; c < BOARD_SIZE; ++c)
-                                                {
-                                                    board[r][c].setHighlight(false);
-                                                }
+                                                board[r][c].setHighlight(false);
                                             }
-                                            // Necromancer raises dead
-                                            necromancer = static_cast<Necromancer *>(selectedPiece);
-                                            awaitingPawnPlacement = necromancer->raiseDead(targetPosition, board, pieces);
                                         }
+                                        // Necromancer raises dead
+                                        necromancer = static_cast<Necromancer *>(selectedPiece);
+                                        awaitingPawnPlacement = necromancer->raiseDead(targetPosition, board, pieces);
                                     }
                                 }
                                 else
@@ -236,30 +222,21 @@ void runChessGame(sf::RenderWindow &window)
                         Piece *targetPiece = getPieceAtPosition(targetPosition, pieces);
                         if (targetPiece && targetPiece != selectedPiece)
                         {
-                            if (selectedPiece->getType() == "Wizard")
-                            {
-                                // Wizard captures without moving
-                                Wizard *wizard = static_cast<Wizard *>(selectedPiece);
-                                wizard->capture(targetPosition, pieces);
-                            }
-                            else
-                            {
-                                selectedPiece->capture(targetPosition, pieces);
+                            selectedPiece->capture(targetPosition, pieces);
 
-                                if (selectedPiece->getType() == "Necromancer")
+                            if (selectedPiece->getType() == "Necromancer")
+                            {
+                                // Clear highlights before entering raiseDead
+                                for (int r = 0; r < BOARD_SIZE; ++r)
                                 {
-                                    // Clear highlights before entering raiseDead
-                                    for (int r = 0; r < BOARD_SIZE; ++r)
+                                    for (int c = 0; c < BOARD_SIZE; ++c)
                                     {
-                                        for (int c = 0; c < BOARD_SIZE; ++c)
-                                        {
-                                            board[r][c].setHighlight(false);
-                                        }
+                                        board[r][c].setHighlight(false);
                                     }
-                                    // Necromancer raises dead
-                                    necromancer = static_cast<Necromancer *>(selectedPiece);
-                                    awaitingPawnPlacement = necromancer->raiseDead(targetPosition, board, pieces);
                                 }
+                                // Necromancer raises dead
+                                necromancer = static_cast<Necromancer *>(selectedPiece);
+                                awaitingPawnPlacement = necromancer->raiseDead(targetPosition, board, pieces);
                             }
                         }
                         else
@@ -285,6 +262,15 @@ void runChessGame(sf::RenderWindow &window)
                 }
             }
         }
+        // code to remove pieces marked for removal
+        pieces.erase(std::remove_if(pieces.begin(), pieces.end(),
+                                    [](const std::unique_ptr<Piece> &piece)
+                                    {
+                                        auto hellPawn = dynamic_cast<HellPawn *>(piece.get());
+                                        return hellPawn && hellPawn->toBeRemoved;
+                                    }),
+                     pieces.end());
+
         window.clear();
         drawChessboard(window, board);
         for (const auto &piece : pieces)

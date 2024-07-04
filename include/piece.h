@@ -50,8 +50,17 @@ public:
     // Returns the color of the piece.
     Color getColor() const { return color; }
 
+    // Sets the color of the piece.
+    void setColor(Color newColor) { color = newColor; }
+
     // Draws the piece on the given window.
     void draw(sf::RenderWindow &window) { window.draw(sprite); }
+
+    // Set the texture fo the sprite
+    void setTexture(const sf::Texture &texture)
+    {
+        sprite.setTexture(texture);
+    }
 
     // Virtual function to determine if the piece can move to the target position. Must be implemented by derived classes.
     virtual bool canMoveTo(const sf::Vector2f &target, const std::vector<std::unique_ptr<Piece>> &pieces) const = 0;

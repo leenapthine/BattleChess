@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/lee/Desktop/Project_Ideas/chess2/src/button.cpp" "CMakeFiles/ChessGUI.dir/src/button.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/button.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/game.cpp" "CMakeFiles/ChessGUI.dir/src/game.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/game.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/globals.cpp" "CMakeFiles/ChessGUI.dir/src/globals.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/globals.cpp.o.d"
+  "/Users/lee/Desktop/Project_Ideas/chess2/src/hellPawn.cpp" "CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/howler.cpp" "CMakeFiles/ChessGUI.dir/src/howler.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/howler.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/king.cpp" "CMakeFiles/ChessGUI.dir/src/king.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/king.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/knight.cpp" "CMakeFiles/ChessGUI.dir/src/knight.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/knight.cpp.o.d"
@@ -28,6 +29,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/lee/Desktop/Project_Ideas/chess2/src/square.cpp" "CMakeFiles/ChessGUI.dir/src/square.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/square.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/utility.cpp" "CMakeFiles/ChessGUI.dir/src/utility.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/utility.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/wizard.cpp" "CMakeFiles/ChessGUI.dir/src/wizard.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/wizard.cpp.o.d"
+  "/Users/lee/Desktop/Project_Ideas/chess2/src/youngWiz.cpp" "CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

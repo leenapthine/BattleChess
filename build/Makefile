@@ -273,6 +273,30 @@ src/globals.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/globals.cpp.s
 .PHONY : src/globals.cpp.s
 
+src/hellPawn.o: src/hellPawn.cpp.o
+.PHONY : src/hellPawn.o
+
+# target to build an object file
+src/hellPawn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o
+.PHONY : src/hellPawn.cpp.o
+
+src/hellPawn.i: src/hellPawn.cpp.i
+.PHONY : src/hellPawn.i
+
+# target to preprocess a source file
+src/hellPawn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.i
+.PHONY : src/hellPawn.cpp.i
+
+src/hellPawn.s: src/hellPawn.cpp.s
+.PHONY : src/hellPawn.s
+
+# target to generate assembly for a file
+src/hellPawn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.s
+.PHONY : src/hellPawn.cpp.s
+
 src/howler.o: src/howler.cpp.o
 .PHONY : src/howler.o
 
@@ -609,6 +633,30 @@ src/wizard.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/wizard.cpp.s
 .PHONY : src/wizard.cpp.s
 
+src/youngWiz.o: src/youngWiz.cpp.o
+.PHONY : src/youngWiz.o
+
+# target to build an object file
+src/youngWiz.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o
+.PHONY : src/youngWiz.cpp.o
+
+src/youngWiz.i: src/youngWiz.cpp.i
+.PHONY : src/youngWiz.i
+
+# target to preprocess a source file
+src/youngWiz.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.i
+.PHONY : src/youngWiz.cpp.i
+
+src/youngWiz.s: src/youngWiz.cpp.s
+.PHONY : src/youngWiz.s
+
+# target to generate assembly for a file
+src/youngWiz.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.s
+.PHONY : src/youngWiz.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -636,6 +684,9 @@ help:
 	@echo "... src/globals.o"
 	@echo "... src/globals.i"
 	@echo "... src/globals.s"
+	@echo "... src/hellPawn.o"
+	@echo "... src/hellPawn.i"
+	@echo "... src/hellPawn.s"
 	@echo "... src/howler.o"
 	@echo "... src/howler.i"
 	@echo "... src/howler.s"
@@ -678,6 +729,9 @@ help:
 	@echo "... src/wizard.o"
 	@echo "... src/wizard.i"
 	@echo "... src/wizard.s"
+	@echo "... src/youngWiz.o"
+	@echo "... src/youngWiz.i"
+	@echo "... src/youngWiz.s"
 .PHONY : help
 
 

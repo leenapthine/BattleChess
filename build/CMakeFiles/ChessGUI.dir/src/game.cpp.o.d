@@ -501,10 +501,12 @@ CMakeFiles/ChessGUI.dir/src/game.cpp.o: \
   /Users/lee/Desktop/Project_Ideas/chess2/include/piece.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/square.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/wizard.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/youngWiz.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/necromancer.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/globals.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/pawn.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/necroPawn.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/hellPawn.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/boulderThrower.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/howler.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/bishop.h \

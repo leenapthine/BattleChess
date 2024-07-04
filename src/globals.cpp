@@ -5,6 +5,9 @@
 
 const int BOARD_SIZE = 8;
 const int TILE_SIZE = 80;
+const int WINDOW_WIDTH = BOARD_SIZE * TILE_SIZE;
+const int BUTTON_SIZE = 50;
+const int BUTTON_SPACING = 10;
 
 sf::Texture whiteRookTexture;
 sf::Texture blackRookTexture;
@@ -32,3 +35,7 @@ sf::Texture whiteHowlerTexture;
 sf::Texture blackHowlerTexture;
 sf::Texture whiteProwlerTexture;
 sf::Texture blackProwlerTexture;
+sf::Texture whiteHellPawnTexture;
+sf::Texture blackHellPawnTexture;
+sf::Texture blackYoungWizTexture;
+sf::Texture whiteYoungWizTexture;

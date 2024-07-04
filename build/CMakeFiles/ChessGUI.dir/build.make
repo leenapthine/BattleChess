@@ -349,6 +349,34 @@ CMakeFiles/ChessGUI.dir/src/prowler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessGUI.dir/src/prowler.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lee/Desktop/Project_Ideas/chess2/src/prowler.cpp -o CMakeFiles/ChessGUI.dir/src/prowler.cpp.s
 
+CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o: CMakeFiles/ChessGUI.dir/flags.make
+CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o: /Users/lee/Desktop/Project_Ideas/chess2/src/hellPawn.cpp
+CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o: CMakeFiles/ChessGUI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o -MF CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o.d -o CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/hellPawn.cpp
+
+CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lee/Desktop/Project_Ideas/chess2/src/hellPawn.cpp > CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.i
+
+CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lee/Desktop/Project_Ideas/chess2/src/hellPawn.cpp -o CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.s
+
+CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o: CMakeFiles/ChessGUI.dir/flags.make
+CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o: /Users/lee/Desktop/Project_Ideas/chess2/src/youngWiz.cpp
+CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o: CMakeFiles/ChessGUI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o -MF CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o.d -o CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/youngWiz.cpp
+
+CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lee/Desktop/Project_Ideas/chess2/src/youngWiz.cpp > CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.i
+
+CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lee/Desktop/Project_Ideas/chess2/src/youngWiz.cpp -o CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.s
+
 # Object files for target ChessGUI
 ChessGUI_OBJECTS = \
 "CMakeFiles/ChessGUI.dir/src/main.cpp.o" \
@@ -370,7 +398,9 @@ ChessGUI_OBJECTS = \
 "CMakeFiles/ChessGUI.dir/src/necroPawn.cpp.o" \
 "CMakeFiles/ChessGUI.dir/src/boulderThrower.cpp.o" \
 "CMakeFiles/ChessGUI.dir/src/howler.cpp.o" \
-"CMakeFiles/ChessGUI.dir/src/prowler.cpp.o"
+"CMakeFiles/ChessGUI.dir/src/prowler.cpp.o" \
+"CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o" \
+"CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o"
 
 # External object files for target ChessGUI
 ChessGUI_EXTERNAL_OBJECTS =
@@ -395,12 +425,14 @@ ChessGUI: CMakeFiles/ChessGUI.dir/src/necroPawn.cpp.o
 ChessGUI: CMakeFiles/ChessGUI.dir/src/boulderThrower.cpp.o
 ChessGUI: CMakeFiles/ChessGUI.dir/src/howler.cpp.o
 ChessGUI: CMakeFiles/ChessGUI.dir/src/prowler.cpp.o
+ChessGUI: CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o
+ChessGUI: CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o
 ChessGUI: CMakeFiles/ChessGUI.dir/build.make
 ChessGUI: /opt/homebrew/lib/libsfml-graphics.2.6.1.dylib
 ChessGUI: /opt/homebrew/lib/libsfml-window.2.6.1.dylib
 ChessGUI: /opt/homebrew/lib/libsfml-system.2.6.1.dylib
 ChessGUI: CMakeFiles/ChessGUI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable ChessGUI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable ChessGUI"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChessGUI.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

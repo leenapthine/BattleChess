@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ChessGUI.dir/src/game.cpp.o.d"
   "CMakeFiles/ChessGUI.dir/src/globals.cpp.o"
   "CMakeFiles/ChessGUI.dir/src/globals.cpp.o.d"
+  "CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o"
+  "CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o.d"
   "CMakeFiles/ChessGUI.dir/src/howler.cpp.o"
   "CMakeFiles/ChessGUI.dir/src/howler.cpp.o.d"
   "CMakeFiles/ChessGUI.dir/src/king.cpp.o"
@@ -39,6 +41,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ChessGUI.dir/src/utility.cpp.o.d"
   "CMakeFiles/ChessGUI.dir/src/wizard.cpp.o"
   "CMakeFiles/ChessGUI.dir/src/wizard.cpp.o.d"
+  "CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o"
+  "CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o.d"
   "ChessGUI"
   "ChessGUI.pdb"
 )

@@ -502,5 +502,6 @@ CMakeFiles/ChessGUI.dir/src/menu.cpp.o: \
   /Users/lee/Desktop/Project_Ideas/chess2/include/utility.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/piece.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/square.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/globals.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/istream

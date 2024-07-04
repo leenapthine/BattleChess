@@ -118,5 +118,17 @@
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/prowler.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/prowler.cpp",
   "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/prowler.cpp",
   "output": "CMakeFiles/ChessGUI.dir/src/prowler.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/hellPawn.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/hellPawn.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o"
+},
+{
+  "directory": "/Users/lee/Desktop/Project_Ideas/chess2/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/opt/homebrew/Cellar/sfml/2.6.1/include -I/Users/lee/Desktop/Project_Ideas/chess2/include -isystem /opt/homebrew/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -o CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o -c /Users/lee/Desktop/Project_Ideas/chess2/src/youngWiz.cpp",
+  "file": "/Users/lee/Desktop/Project_Ideas/chess2/src/youngWiz.cpp",
+  "output": "CMakeFiles/ChessGUI.dir/src/youngWiz.cpp.o"
 }
 ]

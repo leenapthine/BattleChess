@@ -33,6 +33,12 @@ bool Button::isClicked(const sf::Vector2f &mousePos)
     return button.getGlobalBounds().contains(mousePos);
 }
 
+// Method to check if the mouse is hovered over the button
+bool Button::isHovered(const sf::Vector2f &mousePos)
+{
+    return button.getGlobalBounds().contains(mousePos);
+}
+
 // Method to provide access to the button's shape
 sf::RectangleShape &Button::getButtonShape()
 {

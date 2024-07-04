@@ -6,6 +6,9 @@
 
 extern const int BOARD_SIZE;
 extern const int TILE_SIZE;
+extern const int WINDOW_WIDTH;
+extern const int BUTTON_SIZE;
+extern const int BUTTON_SPACING;
 
 extern sf::Texture whiteRookTexture;
 extern sf::Texture blackRookTexture;
@@ -33,5 +36,9 @@ extern sf::Texture blackHowlerTexture;
 extern sf::Texture whiteHowlerTexture;
 extern sf::Texture blackProwlerTexture;
 extern sf::Texture whiteProwlerTexture;
+extern sf::Texture blackHellPawnTexture;
+extern sf::Texture whiteHellPawnTexture;
+extern sf::Texture blackYoungWizTexture;
+extern sf::Texture whiteYoungWizTexture;
 
 #endif // GLOBALS_H

@@ -47,6 +47,8 @@
 #include "boulderThrower.h"
 #include "howler.h"
 #include "prowler.h"
+#include "hellPawn.h"
+#include "youngWiz.h"
 
 /**
  * @brief Checks if the path between the starting position and the ending position is clear of any pieces.
@@ -206,6 +208,24 @@ void loadTextures(std::vector<std::unique_ptr<Piece>> &pieces)
         throw std::runtime_error("Failed to load BlackProwler.png");
     }
 
+    if (!whiteHellPawnTexture.loadFromFile("../resources/WhiteHellPawn.png"))
+    {
+        throw std::runtime_error("Failed to load WhiteHellPawn.png");
+    }
+    if (!blackHellPawnTexture.loadFromFile("../resources/BlackHellPawn.png"))
+    {
+        throw std::runtime_error("Failed to load BlackHellPawn.png");
+    }
+
+    if (!whiteYoungWizTexture.loadFromFile("../resources/WhiteYoungWiz.png"))
+    {
+        throw std::runtime_error("Failed to load WhiteYoungWiz.png");
+    }
+    if (!blackYoungWizTexture.loadFromFile("../resources/BlackYoungWiz.png"))
+    {
+        throw std::runtime_error("Failed to load BlackYoungWiz.png");
+    }
+
     // Clear the pieces vector before adding new pieces
     pieces.clear();
 
@@ -216,8 +236,8 @@ void loadTextures(std::vector<std::unique_ptr<Piece>> &pieces)
     pieces.push_back(std::make_unique<BoulderThrower>(blackBoulderThrowerTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 8), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Howler>(whiteHowlerTexture, sf::Vector2f(160, 0), Piece::Color::White));
     pieces.push_back(std::make_unique<Bishop>(blackBishopTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 3), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Bishop>(whiteBishopTexture, sf::Vector2f(400, 0), Piece::Color::White));
-    pieces.push_back(std::make_unique<Bishop>(blackBishopTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 6), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
+    pieces.push_back(std::make_unique<Wizard>(whiteWizardTexture, sf::Vector2f(400, 0), Piece::Color::White));
+    pieces.push_back(std::make_unique<Necromancer>(blackNecromancerTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 6), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Prowler>(whiteProwlerTexture, sf::Vector2f(80, 0), Piece::Color::White));
     pieces.push_back(std::make_unique<Knight>(blackKnightTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 2), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
     pieces.push_back(std::make_unique<BeastKnight>(whiteBeastKnightTexture, sf::Vector2f(480, 0), Piece::Color::White));
@@ -225,8 +245,8 @@ void loadTextures(std::vector<std::unique_ptr<Piece>> &pieces)
     pieces.push_back(std::make_unique<Pawn>(whitePawnTexture, sf::Vector2f(0, 80), Piece::Color::White));
     pieces.push_back(std::make_unique<Pawn>(blackPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 1), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Pawn>(whitePawnTexture, sf::Vector2f(80, 80), Piece::Color::White));
-    pieces.push_back(std::make_unique<Pawn>(blackPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 2), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Pawn>(whitePawnTexture, sf::Vector2f(160, 80), Piece::Color::White));
+    pieces.push_back(std::make_unique<HellPawn>(blackHellPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 2), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
+    pieces.push_back(std::make_unique<HellPawn>(whiteHellPawnTexture, sf::Vector2f(160, 80), Piece::Color::White));
     pieces.push_back(std::make_unique<Pawn>(blackPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 3), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Pawn>(whitePawnTexture, sf::Vector2f(240, 80), Piece::Color::White));
     pieces.push_back(std::make_unique<Pawn>(blackPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 4), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
@@ -236,16 +256,16 @@ void loadTextures(std::vector<std::unique_ptr<Piece>> &pieces)
     pieces.push_back(std::make_unique<Pawn>(blackPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 6), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Pawn>(whitePawnTexture, sf::Vector2f(480, 80), Piece::Color::White));
     pieces.push_back(std::make_unique<Pawn>(blackPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 7), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Pawn>(whitePawnTexture, sf::Vector2f(560, 80), Piece::Color::White));
+    pieces.push_back(std::make_unique<YoungWiz>(whiteYoungWizTexture, sf::Vector2f(560, 80), Piece::Color::White));
     pieces.push_back(std::make_unique<Pawn>(blackPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 8), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
     pieces.push_back(std::make_unique<King>(whiteKingTexture, sf::Vector2f(320, 0), Piece::Color::White));
     pieces.push_back(std::make_unique<King>(blackKingTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 5), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Queen>(whiteQueenTexture, sf::Vector2f(240, 0), Piece::Color::White));
     pieces.push_back(std::make_unique<Queen>(blackQueenTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 4), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Wizard>(whiteWizardTexture, sf::Vector2f(240, 160), Piece::Color::White));
-    pieces.push_back(std::make_unique<Wizard>(blackWizardTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 4), TILE_SIZE * (BOARD_SIZE - 3)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Necromancer>(whiteNecromancerTexture, sf::Vector2f(320, 160), Piece::Color::White));
-    pieces.push_back(std::make_unique<Necromancer>(blackNecromancerTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 3), TILE_SIZE * (BOARD_SIZE - 3)), Piece::Color::Black));
+    // pieces.push_back(std::make_unique<Wizard>(whiteWizardTexture, sf::Vector2f(240, 160), Piece::Color::White));
+    // pieces.push_back(std::make_unique<Wizard>(blackWizardTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 4), TILE_SIZE * (BOARD_SIZE - 3)), Piece::Color::Black));
+    // pieces.push_back(std::make_unique<Necromancer>(whiteNecromancerTexture, sf::Vector2f(320, 160), Piece::Color::White));
+    // pieces.push_back(std::make_unique<Necromancer>(blackNecromancerTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 3), TILE_SIZE * (BOARD_SIZE - 3)), Piece::Color::Black));
 
     float scaleFactor = TILE_SIZE / static_cast<float>(std::max(whiteRookTexture.getSize().x, whiteRookTexture.getSize().y));
 

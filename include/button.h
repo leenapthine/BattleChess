@@ -15,6 +15,9 @@ public:
     // Method to check if the button is clicked based on mouse position
     bool isClicked(const sf::Vector2f &mousePos);
 
+    // Method to check if the mouse is hovered over the button
+    bool isHovered(const sf::Vector2f &mousePos);
+
     // Method to provide access to the button's shape for external modifications
     sf::RectangleShape &getButtonShape();
 
@@ -23,4 +26,4 @@ private:
     sf::Text label;
 };
 
-#endif
+#endif // BUTTON_H

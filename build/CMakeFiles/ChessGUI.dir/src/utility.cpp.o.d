@@ -519,4 +519,6 @@ CMakeFiles/ChessGUI.dir/src/utility.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/math.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/prowler.h
+  /Users/lee/Desktop/Project_Ideas/chess2/include/prowler.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/hellPawn.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/youngWiz.h
