@@ -500,11 +500,12 @@ CMakeFiles/ChessGUI.dir/src/game.cpp.o: \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
   /Users/lee/Desktop/Project_Ideas/chess2/include/piece.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/square.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/wizard.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/youngWiz.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/necromancer.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/globals.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/wizard.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/youngWiz.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/pawn.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/pawnHopper.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/necroPawn.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/hellPawn.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/boulderThrower.h \
@@ -515,6 +516,9 @@ CMakeFiles/ChessGUI.dir/src/game.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/math.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/prowler.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/familiar.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/ghostKnight.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/utility.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/button.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \

@@ -8,11 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/lee/Desktop/Project_Ideas/chess2/src/beastDruid.cpp" "CMakeFiles/ChessGUI.dir/src/beastDruid.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/beastDruid.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/beastKnight.cpp" "CMakeFiles/ChessGUI.dir/src/beastKnight.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/beastKnight.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/bishop.cpp" "CMakeFiles/ChessGUI.dir/src/bishop.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/bishop.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/boulderThrower.cpp" "CMakeFiles/ChessGUI.dir/src/boulderThrower.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/boulderThrower.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/button.cpp" "CMakeFiles/ChessGUI.dir/src/button.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/button.cpp.o.d"
+  "/Users/lee/Desktop/Project_Ideas/chess2/src/familiar.cpp" "CMakeFiles/ChessGUI.dir/src/familiar.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/familiar.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/game.cpp" "CMakeFiles/ChessGUI.dir/src/game.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/game.cpp.o.d"
+  "/Users/lee/Desktop/Project_Ideas/chess2/src/ghostKnight.cpp" "CMakeFiles/ChessGUI.dir/src/ghostKnight.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/ghostKnight.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/globals.cpp" "CMakeFiles/ChessGUI.dir/src/globals.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/globals.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/hellPawn.cpp" "CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/hellPawn.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/howler.cpp" "CMakeFiles/ChessGUI.dir/src/howler.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/howler.cpp.o.d"
@@ -23,6 +26,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/lee/Desktop/Project_Ideas/chess2/src/necroPawn.cpp" "CMakeFiles/ChessGUI.dir/src/necroPawn.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/necroPawn.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/necromancer.cpp" "CMakeFiles/ChessGUI.dir/src/necromancer.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/necromancer.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/pawn.cpp" "CMakeFiles/ChessGUI.dir/src/pawn.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/pawn.cpp.o.d"
+  "/Users/lee/Desktop/Project_Ideas/chess2/src/pawnHopper.cpp" "CMakeFiles/ChessGUI.dir/src/pawnHopper.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/pawnHopper.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/prowler.cpp" "CMakeFiles/ChessGUI.dir/src/prowler.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/prowler.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/queen.cpp" "CMakeFiles/ChessGUI.dir/src/queen.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/queen.cpp.o.d"
   "/Users/lee/Desktop/Project_Ideas/chess2/src/rook.cpp" "CMakeFiles/ChessGUI.dir/src/rook.cpp.o" "gcc" "CMakeFiles/ChessGUI.dir/src/rook.cpp.o.d"

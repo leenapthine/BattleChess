@@ -13,6 +13,6 @@ include_directories(include)
 # Link against SFML libraries
 link_directories("/opt/homebrew/Cellar/sfml/2.6.1/lib")
 
-add_executable(ChessGUI src/main.cpp src/square.cpp src/rook.cpp src/globals.cpp src/utility.cpp src/bishop.cpp src/pawn.cpp src/knight.cpp src/king.cpp src/queen.cpp src/menu.cpp src/game.cpp src/button.cpp src/wizard.cpp src/necromancer.cpp src/beastKnight.cpp src/necroPawn.cpp src/boulderThrower.cpp src/howler.cpp src/prowler.cpp src/hellPawn.cpp src/youngWiz.cpp)
+add_executable(ChessGUI src/main.cpp src/square.cpp src/rook.cpp src/globals.cpp src/utility.cpp src/bishop.cpp src/pawn.cpp src/knight.cpp src/king.cpp src/queen.cpp src/menu.cpp src/game.cpp src/button.cpp src/wizard.cpp src/necromancer.cpp src/beastKnight.cpp src/necroPawn.cpp src/boulderThrower.cpp src/howler.cpp src/prowler.cpp src/hellPawn.cpp src/youngWiz.cpp src/pawnHopper.cpp src/beastDruid.cpp src/ghostKnight.cpp src/familiar.cpp)
 
 target_link_libraries(ChessGUI sfml-system sfml-window sfml-graphics)

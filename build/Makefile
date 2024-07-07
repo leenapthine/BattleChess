@@ -129,6 +129,30 @@ ChessGUI/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/build
 .PHONY : ChessGUI/fast
 
+src/beastDruid.o: src/beastDruid.cpp.o
+.PHONY : src/beastDruid.o
+
+# target to build an object file
+src/beastDruid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/beastDruid.cpp.o
+.PHONY : src/beastDruid.cpp.o
+
+src/beastDruid.i: src/beastDruid.cpp.i
+.PHONY : src/beastDruid.i
+
+# target to preprocess a source file
+src/beastDruid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/beastDruid.cpp.i
+.PHONY : src/beastDruid.cpp.i
+
+src/beastDruid.s: src/beastDruid.cpp.s
+.PHONY : src/beastDruid.s
+
+# target to generate assembly for a file
+src/beastDruid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/beastDruid.cpp.s
+.PHONY : src/beastDruid.cpp.s
+
 src/beastKnight.o: src/beastKnight.cpp.o
 .PHONY : src/beastKnight.o
 
@@ -225,6 +249,30 @@ src/button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/button.cpp.s
 .PHONY : src/button.cpp.s
 
+src/familiar.o: src/familiar.cpp.o
+.PHONY : src/familiar.o
+
+# target to build an object file
+src/familiar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/familiar.cpp.o
+.PHONY : src/familiar.cpp.o
+
+src/familiar.i: src/familiar.cpp.i
+.PHONY : src/familiar.i
+
+# target to preprocess a source file
+src/familiar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/familiar.cpp.i
+.PHONY : src/familiar.cpp.i
+
+src/familiar.s: src/familiar.cpp.s
+.PHONY : src/familiar.s
+
+# target to generate assembly for a file
+src/familiar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/familiar.cpp.s
+.PHONY : src/familiar.cpp.s
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -248,6 +296,30 @@ src/game.s: src/game.cpp.s
 src/game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
+
+src/ghostKnight.o: src/ghostKnight.cpp.o
+.PHONY : src/ghostKnight.o
+
+# target to build an object file
+src/ghostKnight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/ghostKnight.cpp.o
+.PHONY : src/ghostKnight.cpp.o
+
+src/ghostKnight.i: src/ghostKnight.cpp.i
+.PHONY : src/ghostKnight.i
+
+# target to preprocess a source file
+src/ghostKnight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/ghostKnight.cpp.i
+.PHONY : src/ghostKnight.cpp.i
+
+src/ghostKnight.s: src/ghostKnight.cpp.s
+.PHONY : src/ghostKnight.s
+
+# target to generate assembly for a file
+src/ghostKnight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/ghostKnight.cpp.s
+.PHONY : src/ghostKnight.cpp.s
 
 src/globals.o: src/globals.cpp.o
 .PHONY : src/globals.o
@@ -489,6 +561,30 @@ src/pawn.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/pawn.cpp.s
 .PHONY : src/pawn.cpp.s
 
+src/pawnHopper.o: src/pawnHopper.cpp.o
+.PHONY : src/pawnHopper.o
+
+# target to build an object file
+src/pawnHopper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/pawnHopper.cpp.o
+.PHONY : src/pawnHopper.cpp.o
+
+src/pawnHopper.i: src/pawnHopper.cpp.i
+.PHONY : src/pawnHopper.i
+
+# target to preprocess a source file
+src/pawnHopper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/pawnHopper.cpp.i
+.PHONY : src/pawnHopper.cpp.i
+
+src/pawnHopper.s: src/pawnHopper.cpp.s
+.PHONY : src/pawnHopper.s
+
+# target to generate assembly for a file
+src/pawnHopper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/src/pawnHopper.cpp.s
+.PHONY : src/pawnHopper.cpp.s
+
 src/prowler.o: src/prowler.cpp.o
 .PHONY : src/prowler.o
 
@@ -666,6 +762,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ChessGUI"
+	@echo "... src/beastDruid.o"
+	@echo "... src/beastDruid.i"
+	@echo "... src/beastDruid.s"
 	@echo "... src/beastKnight.o"
 	@echo "... src/beastKnight.i"
 	@echo "... src/beastKnight.s"
@@ -678,9 +777,15 @@ help:
 	@echo "... src/button.o"
 	@echo "... src/button.i"
 	@echo "... src/button.s"
+	@echo "... src/familiar.o"
+	@echo "... src/familiar.i"
+	@echo "... src/familiar.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
+	@echo "... src/ghostKnight.o"
+	@echo "... src/ghostKnight.i"
+	@echo "... src/ghostKnight.s"
 	@echo "... src/globals.o"
 	@echo "... src/globals.i"
 	@echo "... src/globals.s"
@@ -711,6 +816,9 @@ help:
 	@echo "... src/pawn.o"
 	@echo "... src/pawn.i"
 	@echo "... src/pawn.s"
+	@echo "... src/pawnHopper.o"
+	@echo "... src/pawnHopper.i"
+	@echo "... src/pawnHopper.s"
 	@echo "... src/prowler.o"
 	@echo "... src/prowler.i"
 	@echo "... src/prowler.s"

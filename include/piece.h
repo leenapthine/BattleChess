@@ -82,11 +82,15 @@ public:
         setPosition(target);
     }
 
+    bool isStunned() const { return stunned; }
+    void setStunned(bool value) { stunned = value; }
+
 protected:
     sf::Texture &texture;
     sf::Sprite sprite;
     sf::Vector2f position;
     Color color;
+    bool stunned = false;
 };
 
 #endif

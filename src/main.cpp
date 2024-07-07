@@ -25,7 +25,8 @@ int main()
         }
         else
         {
-            runChessGame(window);
+            Game game;
+            game.runChessGame(window);
         }
     }
 

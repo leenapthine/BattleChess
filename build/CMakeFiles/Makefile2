@@ -81,12 +81,12 @@ clean: CMakeFiles/ChessGUI.dir/clean
 CMakeFiles/ChessGUI.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessGUI.dir/build.make CMakeFiles/ChessGUI.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Built target ChessGUI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27 "Built target ChessGUI"
 .PHONY : CMakeFiles/ChessGUI.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ChessGUI.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles 27
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ChessGUI.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lee/Desktop/Project_Ideas/chess2/build/CMakeFiles 0
 .PHONY : CMakeFiles/ChessGUI.dir/rule

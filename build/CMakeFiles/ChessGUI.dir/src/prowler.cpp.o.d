@@ -502,4 +502,6 @@ CMakeFiles/ChessGUI.dir/src/prowler.cpp.o: \
   /Users/lee/Desktop/Project_Ideas/chess2/include/prowler.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/utility.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/button.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/globals.h
+  /Users/lee/Desktop/Project_Ideas/chess2/include/globals.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/istream

@@ -134,151 +134,128 @@ void HellPawn::capture(const sf::Vector2f &target, std::vector<std::unique_ptr<P
         }
     }
 
-    // If an opponent piece is found, change its color and texture if it's a Rook
+    // If an opponent piece is found, change its color and texture if it's a known piece type
     if (targetPieceIt != pieces.end())
     {
-        if ((*targetPieceIt)->getType() == "Rook")
+        Piece *targetPiece = targetPieceIt->get();
+        bool isKnownPieceType = true;
+
+        std::string pieceType = targetPiece->getType();
+        std::cout << "Captured piece type: " << pieceType << std::endl;
+
+        if (pieceType == "Rook")
         {
-            // Cast to Rook and change its color and texture
-            Rook *rook = dynamic_cast<Rook *>(targetPieceIt->get());
+            Rook *rook = dynamic_cast<Rook *>(targetPiece);
             if (rook)
             {
                 rook->setColor(this->getColor());
                 sf::Texture &newTexture = getRookTexture();
                 rook->setTexture(newTexture);
-                // Mark this HellPawn instance for removal after the capture operation
-                toBeRemoved = true;
+                std::cout << "Assigned Rook texture" << std::endl;
             }
         }
-
-        else if ((*targetPieceIt)->getType() == "Knight")
+        else if (pieceType == "Knight")
         {
-            // Cast to Rook and change its color and texture
-            Knight *knight = dynamic_cast<Knight *>(targetPieceIt->get());
+            Knight *knight = dynamic_cast<Knight *>(targetPiece);
             if (knight)
             {
                 knight->setColor(this->getColor());
                 sf::Texture &newTexture = getKnightTexture();
                 knight->setTexture(newTexture);
-                // Mark this HellPawn instance for removal after the capture operation
-                toBeRemoved = true;
+                std::cout << "Assigned Knight texture" << std::endl;
             }
         }
-
-        else if ((*targetPieceIt)->getType() == "Bishop")
+        else if (pieceType == "Bishop")
         {
-            // Cast to Rook and change its color and texture
-            Bishop *bishop = dynamic_cast<Bishop *>(targetPieceIt->get());
+            Bishop *bishop = dynamic_cast<Bishop *>(targetPiece);
             if (bishop)
             {
                 bishop->setColor(this->getColor());
                 sf::Texture &newTexture = getBishopTexture();
                 bishop->setTexture(newTexture);
-                // Mark this HellPawn instance for removal after the capture operation
-                toBeRemoved = true;
+                std::cout << "Assigned Bishop texture" << std::endl;
             }
         }
-
-        else if ((*targetPieceIt)->getType() == "Queen")
+        else if (pieceType == "Queen")
         {
-            // Cast to Queen and change its color and texture
-            Queen *queen = dynamic_cast<Queen *>(targetPieceIt->get());
+            Queen *queen = dynamic_cast<Queen *>(targetPiece);
             if (queen)
             {
                 queen->setColor(this->getColor());
                 sf::Texture &newTexture = getQueenTexture();
                 queen->setTexture(newTexture);
-                // Mark this HellPawn instance for removal after the capture operation
-                toBeRemoved = true;
+                std::cout << "Assigned Queen texture" << std::endl;
             }
         }
-
-        else if ((*targetPieceIt)->getType() == "BeastKnight")
+        else if (pieceType == "BeastKnight")
         {
-            // Cast to BeastKnight and change its color and texture
-            BeastKnight *beastKnight = dynamic_cast<BeastKnight *>(targetPieceIt->get());
+            BeastKnight *beastKnight = dynamic_cast<BeastKnight *>(targetPiece);
             if (beastKnight)
             {
                 beastKnight->setColor(this->getColor());
                 sf::Texture &newTexture = getBeastKnightTexture();
                 beastKnight->setTexture(newTexture);
-                // Mark this HellPawn instance for removal after the capture operation
-                toBeRemoved = true;
+                std::cout << "Assigned BeastKnight texture" << std::endl;
             }
         }
-
-        else if ((*targetPieceIt)->getType() == "BoulderThrower")
+        else if (pieceType == "BoulderThrower")
         {
-            // Cast to BoulderThrower and change its color and texture
-            BoulderThrower *boulderThrower = dynamic_cast<BoulderThrower *>(targetPieceIt->get());
+            BoulderThrower *boulderThrower = dynamic_cast<BoulderThrower *>(targetPiece);
             if (boulderThrower)
             {
                 boulderThrower->setColor(this->getColor());
                 sf::Texture &newTexture = getBoulderThrowerTexture();
                 boulderThrower->setTexture(newTexture);
-                // Mark this HellPawn instance for removal after the capture operation
-                toBeRemoved = true;
+                std::cout << "Assigned BoulderThrower texture" << std::endl;
             }
         }
-
-        else if ((*targetPieceIt)->getType() == "Howler")
+        else if (pieceType == "Howler")
         {
-            // Cast to Howler and change its color and texture
-            Howler *howler = dynamic_cast<Howler *>(targetPieceIt->get());
+            Howler *howler = dynamic_cast<Howler *>(targetPiece);
             if (howler)
             {
                 howler->setColor(this->getColor());
                 sf::Texture &newTexture = getHowlerTexture();
                 howler->setTexture(newTexture);
-                // Mark this HellPawn instance for removal after the capture operation
-                toBeRemoved = true;
+                std::cout << "Assigned Howler texture" << std::endl;
             }
         }
-
-        else if ((*targetPieceIt)->getType() == "Prowler")
+        else if (pieceType == "Prowler")
         {
-            // Cast to Prowler and change its color and texture
-            Prowler *prowler = dynamic_cast<Prowler *>(targetPieceIt->get());
+            Prowler *prowler = dynamic_cast<Prowler *>(targetPiece);
             if (prowler)
             {
                 prowler->setColor(this->getColor());
                 sf::Texture &newTexture = getProwlerTexture();
                 prowler->setTexture(newTexture);
-                // Mark this HellPawn instance for removal after the capture operation
-                toBeRemoved = true;
+                std::cout << "Assigned Prowler texture" << std::endl;
             }
         }
-
-        else if ((*targetPieceIt)->getType() == "Necromancer")
+        else if (pieceType == "Necromancer")
         {
-            // Cast to Necromancer and change its color and texture
-            Necromancer *necromancer = dynamic_cast<Necromancer *>(targetPieceIt->get());
+            Necromancer *necromancer = dynamic_cast<Necromancer *>(targetPiece);
             if (necromancer)
             {
                 necromancer->setColor(this->getColor());
                 sf::Texture &newTexture = getNecromancerTexture();
                 necromancer->setTexture(newTexture);
-                // Mark this HellPawn instance for removal after the capture operation
-                toBeRemoved = true;
+                std::cout << "Assigned Necromancer texture" << std::endl;
             }
         }
-
-        else if ((*targetPieceIt)->getType() == "Wizard")
+        else if (pieceType == "Wizard")
         {
-            // Cast to wizard and change its color and texture
-            Wizard *wizard = dynamic_cast<Wizard *>(targetPieceIt->get());
+            Wizard *wizard = dynamic_cast<Wizard *>(targetPiece);
             if (wizard)
             {
                 wizard->setColor(this->getColor());
                 sf::Texture &newTexture = getWizardTexture();
                 wizard->setTexture(newTexture);
-                // Mark this HellPawn instance for removal after the capture operation
-                toBeRemoved = true;
+                std::cout << "Assigned Wizard texture" << std::endl;
             }
         }
-
         else
         {
+            isKnownPieceType = false;
             // Regular capture
             auto it = std::remove_if(pieces.begin(), pieces.end(),
                                      [&](const std::unique_ptr<Piece> &piece)
@@ -287,6 +264,13 @@ void HellPawn::capture(const sf::Vector2f &target, std::vector<std::unique_ptr<P
                                      });
             pieces.erase(it, pieces.end());
             setPosition(target);
+            std::cout << "Captured and removed regular piece" << std::endl;
+        }
+
+        // Mark this HellPawn instance for removal after the capture operation
+        if (isKnownPieceType)
+        {
+            toBeRemoved = true;
         }
     }
     else
@@ -327,7 +311,7 @@ sf::Texture &HellPawn::getBoulderThrowerTexture() const
 
 sf::Texture &HellPawn::getHowlerTexture() const
 {
-    return (getColor() == Piece::Color::White) ? whiteHellPawnTexture : blackHellPawnTexture;
+    return (getColor() == Piece::Color::White) ? whiteHowlerTexture : blackHowlerTexture;
 }
 
 sf::Texture &HellPawn::getProwlerTexture() const

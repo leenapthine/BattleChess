@@ -506,11 +506,14 @@ CMakeFiles/ChessGUI.dir/src/utility.cpp.o: \
   /Users/lee/Desktop/Project_Ideas/chess2/include/queen.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/rook.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/pawn.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/pawnHopper.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/bishop.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/knight.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/wizard.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/necromancer.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/beastKnight.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/ghostKnight.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/beastDruid.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/necroPawn.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/boulderThrower.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/howler.h \
@@ -519,6 +522,7 @@ CMakeFiles/ChessGUI.dir/src/utility.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/math.h \
+  /Users/lee/Desktop/Project_Ideas/chess2/include/familiar.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/prowler.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/hellPawn.h \
   /Users/lee/Desktop/Project_Ideas/chess2/include/youngWiz.h

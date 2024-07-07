@@ -14,6 +14,8 @@ public:
     void highlightValidMoves(std::vector<std::vector<Square>> &board, const std::vector<std::unique_ptr<Piece>> &pieces) const override;
 
     std::string getType() const override { return "Prowler"; }
+
+    bool needsAdditionalMove; // Flag to track if the Prowler needs an additional move
 };
 
 #endif // PROWLER_H

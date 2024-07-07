@@ -6,7 +6,12 @@
 #include <memory>
 #include "piece.h"
 #include "square.h"
+#include "necromancer.h"
 
-void runChessGame(sf::RenderWindow &window);
+class Game
+{
+public:
+    void runChessGame(sf::RenderWindow &window);
+};
 
 #endif

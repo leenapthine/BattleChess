@@ -1,5 +1,5 @@
 // Filename: bishop.cpp
-// Description: Implementation of the Pawn class, which defines the behavior and movement rules of the Pawn piece in our chess game.
+// Description: Implementation of the Bishop class, which defines the behavior and movement rules of the Bishop piece in our chess game.
 
 // Main Classes:
 // - Bishop: Represents the Bishop piece and manages its movement options, highlighting, and capture abilities on the chessboard.

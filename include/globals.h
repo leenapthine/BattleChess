@@ -40,5 +40,13 @@ extern sf::Texture blackHellPawnTexture;
 extern sf::Texture whiteHellPawnTexture;
 extern sf::Texture blackYoungWizTexture;
 extern sf::Texture whiteYoungWizTexture;
+extern sf::Texture blackPawnHopperTexture;
+extern sf::Texture whitePawnHopperTexture;
+extern sf::Texture blackBeastDruidTexture;
+extern sf::Texture whiteBeastDruidTexture;
+extern sf::Texture blackGhostKnightTexture;
+extern sf::Texture whiteGhostKnightTexture;
+extern sf::Texture blackFamiliarTexture;
+extern sf::Texture whiteFamiliarTexture;
 
 #endif // GLOBALS_H

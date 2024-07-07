@@ -1,9 +1,26 @@
 // Filename: prowler.cpp
 
-// Description:
-// Prowler is a place holder class containing the logic for the Knight Piece.
-// Prowler is a Level 2 Knight piece belonging to the Hellspawn race.
-// The piece logic will eventually allow for the Prowler to move again after capturing an enemy piece.
+// Description: Implementation of the Prowler class, which defines the behavior and movement rules of the Prowler piece in our chess game.
+
+// Main Classes:
+// - Prowler: Represents the Prowler piece and manages its movement options, highlighting, and capture abilities on the chessboard.
+
+// Main Functions:
+// - bool Prowler::canMoveTo(const sf::Vector2f &target, const std::vector<std::unique_ptr<Piece>> &pieces) const:
+//   Checks if the Prowler can legally move to the specified target position on the chessboard.
+// - void Prowler::highlightValidMoves(std::vector<std::vector<Square>> &board, const std::vector<std::unique_ptr<Piece>> &pieces) const:
+//   Highlights all valid moves for the Prowler on the provided chessboard, considering its current position and game rules.
+
+// Special Features or Notes:
+// - The Prowler is a level 2 Knight piece that belongs to the HellSpawn Guild
+//   It moves in an L shape comprised of exactly 3 squares distance.
+//   Prowler movement ignores occupied spaces in its path.
+// - When the Prowler captures the first time each turn, it can move again one more time.
+// - It captures upon moving into an occupied opponent space.
+// - Inherits functionality from the Piece class.
+
+// Usage or Context:
+// - This file implements the movement and interaction logic specific to the Prowler piece.
 
 #include "piece.h"
 #include "prowler.h"
@@ -11,6 +28,7 @@
 #include "globals.h"
 #include "square.h"
 #include <vector>
+#include <iostream>
 
 bool Prowler::canMoveTo(const sf::Vector2f &target, const std::vector<std::unique_ptr<Piece>> &pieces) const
 {
@@ -54,4 +72,4 @@ void Prowler::highlightValidMoves(std::vector<std::vector<Square>> &board, const
             board[row][col].setHighlight(true);
         }
     }
-};
+}

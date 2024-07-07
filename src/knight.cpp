@@ -2,7 +2,7 @@
 // Description: Implementation of the Knight class, which defines the behavior and movement rules of the Knight piece in our chess game.
 
 // Main Classes:
-// - Knight: Represents the Pawn piece and manages its movement options, highlighting, and capture abilities on the chessboard.
+// - Knight: Represents the Knight piece and manages its movement options, highlighting, and capture abilities on the chessboard.
 
 // Main Functions:
 // - bool Knight::canMoveTo(const sf::Vector2f &target, const std::vector<std::unique_ptr<Piece>> &pieces) const:

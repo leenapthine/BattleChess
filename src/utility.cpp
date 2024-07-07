@@ -38,14 +38,18 @@
 #include "queen.h"
 #include "rook.h"
 #include "pawn.h"
+#include "pawnHopper.h"
 #include "bishop.h"
 #include "knight.h"
 #include "wizard.h"
 #include "necromancer.h"
 #include "beastKnight.h"
+#include "ghostKnight.h"
+#include "beastDruid.h"
 #include "necroPawn.h"
 #include "boulderThrower.h"
 #include "howler.h"
+#include "familiar.h"
 #include "prowler.h"
 #include "hellPawn.h"
 #include "youngWiz.h"
@@ -181,9 +185,9 @@ void loadTextures(std::vector<std::unique_ptr<Piece>> &pieces)
         throw std::runtime_error("Failed to load BlackBeastKnight.png");
     }
 
-    if (!whiteBoulderThrowerTexture.loadFromFile("../resources/WhiteBeastKnight.png"))
+    if (!whiteBoulderThrowerTexture.loadFromFile("../resources/WhiteBoulderThrower.png"))
     {
-        throw std::runtime_error("Failed to load WhiteBeastKnight.png");
+        throw std::runtime_error("Failed to load WhiteBoulderThrower.png");
     }
     if (!blackBoulderThrowerTexture.loadFromFile("../resources/BlackBoulderThrower.png"))
     {
@@ -226,6 +230,42 @@ void loadTextures(std::vector<std::unique_ptr<Piece>> &pieces)
         throw std::runtime_error("Failed to load BlackYoungWiz.png");
     }
 
+    if (!whitePawnHopperTexture.loadFromFile("../resources/WhitePawnHopper.png"))
+    {
+        throw std::runtime_error("Failed to load WhitePawnHopper.png");
+    }
+    if (!blackPawnHopperTexture.loadFromFile("../resources/BlackPawnHopper.png"))
+    {
+        throw std::runtime_error("Failed to load BlackPawnHopper.png");
+    }
+
+    if (!whiteBeastDruidTexture.loadFromFile("../resources/WhiteBeastDruid.png"))
+    {
+        throw std::runtime_error("Failed to load WhiteBeastDruid.png");
+    }
+    if (!blackBeastDruidTexture.loadFromFile("../resources/BlackBeastDruid.png"))
+    {
+        throw std::runtime_error("Failed to load BlackBeastDruid.png");
+    }
+
+    if (!whiteGhostKnightTexture.loadFromFile("../resources/WhiteGhostKnight.png"))
+    {
+        throw std::runtime_error("Failed to load WhiteGhostKnight.png");
+    }
+    if (!blackGhostKnightTexture.loadFromFile("../resources/BlackGhostKnight.png"))
+    {
+        throw std::runtime_error("Failed to load BlackGhostKnight.png");
+    }
+
+    if (!whiteFamiliarTexture.loadFromFile("../resources/WhiteFamiliar.png"))
+    {
+        throw std::runtime_error("Failed to load WhiteFamiliar.png");
+    }
+    if (!blackFamiliarTexture.loadFromFile("../resources/BlackFamiliar.png"))
+    {
+        throw std::runtime_error("Failed to load BlackFamiliar.png");
+    }
+
     // Clear the pieces vector before adding new pieces
     pieces.clear();
 
@@ -235,12 +275,12 @@ void loadTextures(std::vector<std::unique_ptr<Piece>> &pieces)
     pieces.push_back(std::make_unique<Rook>(whiteRookTexture, sf::Vector2f(560, 0), Piece::Color::White));
     pieces.push_back(std::make_unique<BoulderThrower>(blackBoulderThrowerTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 8), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Howler>(whiteHowlerTexture, sf::Vector2f(160, 0), Piece::Color::White));
-    pieces.push_back(std::make_unique<Bishop>(blackBishopTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 3), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
+    pieces.push_back(std::make_unique<BeastDruid>(blackBeastDruidTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 3), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Wizard>(whiteWizardTexture, sf::Vector2f(400, 0), Piece::Color::White));
     pieces.push_back(std::make_unique<Necromancer>(blackNecromancerTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 6), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Prowler>(whiteProwlerTexture, sf::Vector2f(80, 0), Piece::Color::White));
-    pieces.push_back(std::make_unique<Knight>(blackKnightTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 2), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<BeastKnight>(whiteBeastKnightTexture, sf::Vector2f(480, 0), Piece::Color::White));
+    pieces.push_back(std::make_unique<Familiar>(blackFamiliarTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 2), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
+    pieces.push_back(std::make_unique<GhostKnight>(whiteGhostKnightTexture, sf::Vector2f(480, 0), Piece::Color::White));
     pieces.push_back(std::make_unique<BeastKnight>(blackBeastKnightTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 7), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Pawn>(whitePawnTexture, sf::Vector2f(0, 80), Piece::Color::White));
     pieces.push_back(std::make_unique<Pawn>(blackPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 1), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
@@ -249,7 +289,7 @@ void loadTextures(std::vector<std::unique_ptr<Piece>> &pieces)
     pieces.push_back(std::make_unique<HellPawn>(whiteHellPawnTexture, sf::Vector2f(160, 80), Piece::Color::White));
     pieces.push_back(std::make_unique<Pawn>(blackPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 3), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Pawn>(whitePawnTexture, sf::Vector2f(240, 80), Piece::Color::White));
-    pieces.push_back(std::make_unique<Pawn>(blackPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 4), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
+    pieces.push_back(std::make_unique<PawnHopper>(blackPawnHopperTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 4), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
     pieces.push_back(std::make_unique<NecroPawn>(whiteNecroPawnTexture, sf::Vector2f(320, 80), Piece::Color::White));
     pieces.push_back(std::make_unique<NecroPawn>(blackNecroPawnTexture, sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 5), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
     pieces.push_back(std::make_unique<Pawn>(whitePawnTexture, sf::Vector2f(400, 80), Piece::Color::White));
