@@ -22,14 +22,15 @@ public:
     };
 
     // Constructor that initializes the piece with a texture, initial position, and color. Sets the sprite's position.
-    Piece(sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
+    Piece(const sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
         : texture(texture), sprite(texture), position(initialPosition), color(color)
     {
         sprite.setPosition(position);
     }
 
     // Virtual destructor to ensure proper cleanup of derived classes.
-    virtual ~Piece() {}
+    virtual ~Piece() = default;
+    virtual std::unique_ptr<Piece> clone() const = 0;
 
     // Virtual function to get the type of the piece.
     virtual std::string getType() const = 0;
@@ -53,6 +54,11 @@ public:
     // Sets the color of the piece.
     void setColor(Color newColor) { color = newColor; }
 
+    void print(std::ostream &os) const
+    {
+        os << "Piece at position: (" << getPosition().x << ", " << getPosition().y << "), Type: " << getType() << ", Color: " << (getColor() == Color::White ? "White" : "Black");
+    }
+
     // Draws the piece on the given window.
     void draw(sf::RenderWindow &window) { window.draw(sprite); }
 
@@ -60,6 +66,12 @@ public:
     void setTexture(const sf::Texture &texture)
     {
         sprite.setTexture(texture);
+    }
+
+    // Return a const reference to the texture
+    const sf::Texture &getTexture() const
+    {
+        return texture;
     }
 
     // Virtual function to determine if the piece can move to the target position. Must be implemented by derived classes.
@@ -86,11 +98,14 @@ public:
     void setStunned(bool value) { stunned = value; }
 
 protected:
-    sf::Texture &texture;
+    sf::Texture texture;
     sf::Sprite sprite;
     sf::Vector2f position;
     Color color;
     bool stunned = false;
 };
+
+// Declare operator<< for Piece outside the class
+std::ostream &operator<<(std::ostream &os, const Piece &piece);
 
 #endif

@@ -17,7 +17,11 @@ public:
 
     std::string getType() const override { return "NecroPawn"; }
 
-private:
+    std::unique_ptr<Piece> clone() const override
+    {
+        return std::make_unique<NecroPawn>(*this);
+    }
+
     std::vector<sf::Vector2f> getCapturePositions() const;
 };
 

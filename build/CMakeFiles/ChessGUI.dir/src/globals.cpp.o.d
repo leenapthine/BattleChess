@@ -1,6 +1,6 @@
 CMakeFiles/ChessGUI.dir/src/globals.cpp.o: \
-  /Users/lee/Desktop/Project_Ideas/chess2/src/globals.cpp \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/globals.h \
+  /Users/lee/desktop/Project_Ideas/chess2/src/globals.cpp \
+  /Users/lee/desktop/Project_Ideas/chess2/include/globals.h \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System.hpp \

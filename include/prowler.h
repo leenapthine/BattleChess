@@ -15,6 +15,11 @@ public:
 
     std::string getType() const override { return "Prowler"; }
 
+    std::unique_ptr<Piece> clone() const override
+    {
+        return std::make_unique<Prowler>(*this);
+    }
+
     bool needsAdditionalMove; // Flag to track if the Prowler needs an additional move
 };
 

@@ -16,6 +16,11 @@ public:
     void capture(const sf::Vector2f &target, std::vector<std::unique_ptr<Piece>> &pieces) override;
 
     std::string getType() const override { return "Wizard"; }
+
+    std::unique_ptr<Piece> clone() const override
+    {
+        return std::make_unique<Wizard>(*this);
+    }
 };
 
 #endif

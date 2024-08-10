@@ -16,6 +16,11 @@ public:
     void captureHoppedPiece(const sf::Vector2f &target, std::vector<std::unique_ptr<Piece>> &pieces) const;
 
     std::string getType() const override { return "PawnHopper"; }
+
+    std::unique_ptr<Piece> clone() const override
+    {
+        return std::make_unique<PawnHopper>(*this);
+    }
 };
 
 #endif // PAWNHOPPER_H

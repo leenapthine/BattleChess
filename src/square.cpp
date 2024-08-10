@@ -18,7 +18,7 @@
 
 // Constructor that initializes the square with a given position and color.
 Square::Square(const sf::Vector2f &position, const sf::Color &color)
-    : highlighted(false), highlightColor(sf::Color::Yellow)
+    : highlighted(false), highlightColor(sf::Color::Yellow), position(position)
 {
     shape.setSize(sf::Vector2f(TILE_SIZE, TILE_SIZE));
     shape.setPosition(position);
@@ -29,6 +29,11 @@ Square::Square(const sf::Vector2f &position, const sf::Color &color)
 void Square::setPosition(const sf::Vector2f &position)
 {
     shape.setPosition(position);
+}
+
+sf::Vector2f Square::getPosition() const
+{
+    return shape.getPosition();
 }
 
 // Sets the color of the square.

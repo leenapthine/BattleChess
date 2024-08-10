@@ -10,17 +10,12 @@ class Howler : public Piece
 public:
     Howler(sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
         : Piece(texture, initialPosition, color),
-          boulderThrowerAbilities(false),
-          wizardAbilities(false),
           bishopAbilities(false),
           rookAbilities(false),
           knightAbilities(false),
           pawnAbilities(false),
           queenAbilities(false),
-          kingAbilities(false),
-          beastKnightAbilities(false),
-          necromancerAbilities(false),
-          necroPawnAbilities(false)
+          kingAbilities(false)
     {
         gainInitialAbilities();
     }
@@ -32,17 +27,17 @@ public:
 
     std::string getType() const override { return "Howler"; }
 
-    bool boulderThrowerAbilities;
-    bool wizardAbilities;
+    std::unique_ptr<Piece> clone() const override
+    {
+        return std::make_unique<Howler>(*this);
+    }
+
     bool bishopAbilities;
     bool rookAbilities;
     bool knightAbilities;
     bool pawnAbilities;
     bool queenAbilities;
     bool kingAbilities;
-    bool beastKnightAbilities;
-    bool necromancerAbilities;
-    bool necroPawnAbilities;
 
 private:
     std::vector<std::function<bool(const sf::Vector2f &, const std::vector<std::unique_ptr<Piece>> &)>> movementAbilities;
@@ -56,11 +51,7 @@ private:
     void gainPawnAbilities();
     void gainQueenAbilities();
     void gainKingAbilities();
-    void gainBeastKnightAbilities();
-    void gainBoulderThrowerAbilities();
-    void gainNecromancerAbilities();
-    void gainNecroPawnAbilities();
-    void gainWizardAbilities();
+
     void gainAbilitiesFromCapturedPiece(const Piece &capturedPiece);
 };
 

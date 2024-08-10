@@ -18,6 +18,11 @@ public:
 
     std::string getType() const override { return "Familiar"; }
 
+    std::unique_ptr<Piece> clone() const override
+    {
+        return std::make_unique<Familiar>(*this);
+    }
+
 private:
     bool stone = false;
 };

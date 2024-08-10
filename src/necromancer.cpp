@@ -27,6 +27,7 @@
 #include "globals.h"
 #include "utility.h"
 #include "pawn.h"
+#include "textureManager.h"
 #include "iostream"
 
 // Determine if the Pawn can move to a specified target position
@@ -101,10 +102,10 @@ void Necromancer::highlightValidMoves(std::vector<std::vector<Square>> &board, c
 }
 
 // Place a pawn piece in a selected adjacent square
-bool Necromancer::raiseDead(const sf::Vector2f &targetPosition, std::vector<std::vector<Square>> &board, std::vector<std::unique_ptr<Piece>> &pieces)
+bool Necromancer::raiseDead(const sf::Vector2f &targetPosition, std::vector<std::vector<Square>> &board, std::vector<std::unique_ptr<Piece>> &pieces, TextureManager &textureManager)
 {
     bool awaitingPawnPlacement = false;
-    const sf::Texture &pawnTexture = getPawnTexture();
+    const sf::Texture &pawnTexture = getPawnTexture(textureManager);
 
     // Get all adjacent positions to the target position
     std::vector<sf::Vector2f> possiblePositions = getAdjacentPositions(targetPosition);
@@ -121,7 +122,7 @@ bool Necromancer::raiseDead(const sf::Vector2f &targetPosition, std::vector<std:
                 int col = pos.x / TILE_SIZE;
                 int row = pos.y / TILE_SIZE;
                 // Highlight the square for pawn placement
-                board[row][col].setHighlight(true);
+                board[row][col].setHighlight(true, sf::Color::Green);
                 std::cout << "hightlighting for pawn placement: (" << col << ", " << row << ")" << std::endl; // Debug
             }
         }
@@ -130,9 +131,21 @@ bool Necromancer::raiseDead(const sf::Vector2f &targetPosition, std::vector<std:
 }
 
 // Return the appropriate pawn texture based on the Necromancer's color
-sf::Texture &Necromancer::getPawnTexture()
+sf::Texture &Necromancer::getPawnTexture(TextureManager &textureManager) const
 {
-    return (getColor() == Piece::Color::White) ? whitePawnTexture : blackPawnTexture;
+    // Determine the texture name based on the Necromancer's color
+    std::string textureName = (getColor() == Piece::Color::White) ? "WhitePawn" : "BlackPawn";
+
+    // Retrieve the texture from the TextureManager
+    sf::Texture *texture = textureManager.getTexture(textureName);
+
+    // Handle the case where the texture is not found
+    if (texture == nullptr)
+    {
+        throw std::runtime_error("Texture not found: " + textureName);
+    }
+
+    return *texture;
 }
 
 // Return all four adjacent positions (left, right, up, down)

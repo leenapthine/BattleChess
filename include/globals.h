@@ -48,5 +48,26 @@ extern sf::Texture blackGhostKnightTexture;
 extern sf::Texture whiteGhostKnightTexture;
 extern sf::Texture blackFamiliarTexture;
 extern sf::Texture whiteFamiliarTexture;
-
+extern sf::Texture blackDeadLauncherTexture;
+extern sf::Texture whiteDeadLauncherTexture;
+extern sf::Texture blackPortalTexture;
+extern sf::Texture whitePortalTexture;
+extern sf::Texture blackBeholderTexture;
+extern sf::Texture whiteBeholderTexture;
+extern sf::Texture blackQueenOfIllusionsTexture;
+extern sf::Texture whiteQueenOfIllusionsTexture;
+extern sf::Texture blackQueenOfBonesTexture;
+extern sf::Texture whiteQueenOfBonesTexture;
+extern sf::Texture blackQueenOfDominationTexture;
+extern sf::Texture whiteQueenOfDominationTexture;
+extern sf::Texture blackQueenOfDestructionTexture;
+extern sf::Texture whiteQueenOfDestructionTexture;
+extern sf::Texture whiteWizardKingTexture;
+extern sf::Texture blackWizardKingTexture;
+extern sf::Texture whiteGhoulKingTexture;
+extern sf::Texture blackGhoulKingTexture;
+extern sf::Texture whiteFrogKingTexture;
+extern sf::Texture blackFrogKingTexture;
+extern sf::Texture whiteHellKingTexture;
+extern sf::Texture blackHellKingTexture;
 #endif // GLOBALS_H

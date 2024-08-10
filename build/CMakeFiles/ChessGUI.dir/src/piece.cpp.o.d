@@ -1,6 +1,6 @@
 CMakeFiles/ChessGUI.dir/src/piece.cpp.o: \
-  /Users/lee/Desktop/Project_Ideas/chess2/src/piece.cpp \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/piece.h \
+  /Users/lee/desktop/Project_Ideas/chess2/src/piece.cpp \
+  /Users/lee/desktop/Project_Ideas/chess2/include/piece.h \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System.hpp \
@@ -498,4 +498,6 @@ CMakeFiles/ChessGUI.dir/src/piece.cpp.o: \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Sprite.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Text.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/square.h
+  /Users/lee/desktop/Project_Ideas/chess2/include/square.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/istream

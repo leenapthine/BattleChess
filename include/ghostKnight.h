@@ -16,6 +16,11 @@ public:
     void stunAdjacentEnemies(const sf::Vector2f &position, std::vector<std::unique_ptr<Piece>> &pieces, std::vector<std::vector<Square>> &board); // Stun adjacent enemies
 
     std::string getType() const override { return "GhostKnight"; }
+
+    std::unique_ptr<Piece> clone() const override
+    {
+        return std::make_unique<GhostKnight>(*this);
+    }
 };
 
 #endif // GHOSTKNIGHT_H

@@ -1,6 +1,6 @@
 CMakeFiles/ChessGUI.dir/src/button.cpp.o: \
-  /Users/lee/Desktop/Project_Ideas/chess2/src/button.cpp \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/button.h \
+  /Users/lee/desktop/Project_Ideas/chess2/src/button.cpp \
+  /Users/lee/desktop/Project_Ideas/chess2/include/button.h \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System.hpp \

@@ -1,7 +1,7 @@
 CMakeFiles/ChessGUI.dir/src/utility.cpp.o: \
-  /Users/lee/Desktop/Project_Ideas/chess2/src/utility.cpp \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/utility.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/piece.h \
+  /Users/lee/desktop/Project_Ideas/chess2/src/utility.cpp \
+  /Users/lee/desktop/Project_Ideas/chess2/include/utility.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/piece.h \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System.hpp \
@@ -499,30 +499,45 @@ CMakeFiles/ChessGUI.dir/src/utility.cpp.o: \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Sprite.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Text.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/square.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/button.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/globals.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/king.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/queen.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/rook.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/pawn.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/pawnHopper.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/bishop.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/knight.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/wizard.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/necromancer.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/beastKnight.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/ghostKnight.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/beastDruid.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/necroPawn.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/boulderThrower.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/howler.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/unordered_set \
+  /Users/lee/desktop/Project_Ideas/chess2/include/square.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/istream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__hash_table \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/math.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/familiar.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/prowler.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/hellPawn.h \
-  /Users/lee/Desktop/Project_Ideas/chess2/include/youngWiz.h
+  /Users/lee/desktop/Project_Ideas/chess2/include/button.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/textureManager.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/globals.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/king.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/hellKing.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/queen.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/queenOfIllusions.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/queenOfBones.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/queenOfDomination.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/queenOfDestruction.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/rook.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/pawn.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/pawnHopper.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/bishop.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/knight.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/wizard.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/necromancer.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/beastKnight.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/ghostKnight.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/beastDruid.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/necroPawn.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/boulderThrower.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/beholder.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/deadLauncher.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/howler.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/unordered_set \
+  /Users/lee/desktop/Project_Ideas/chess2/include/portal.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/familiar.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/prowler.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/hellPawn.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/youngWiz.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/ghoulKing.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/wizardKing.h \
+  /Users/lee/desktop/Project_Ideas/chess2/include/frogKing.h

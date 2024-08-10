@@ -10,13 +10,15 @@
 //   Checks if the HellPawn can legally move to the specified target position on the chessboard.
 // - void HellPawn::highlightValidMoves(std::vector<std::vector<Square>> &board, const std::vector<std::unique_ptr<Piece>> &pieces) const:
 //   Highlights all valid moves for the HellPawn on the provided chessboard, considering its current position and game rules.
+// - void HellPawn::infect(const Piece *capturedPiece, std::vector<std::unique_ptr<Piece>> &pieces, std::vector<std::vector<Square>> &board, TextureManager &textureManager)
+//   Infects the minds of enemy pieces and merges with them to take control.
 
 // Special Features or Notes:
 // - The HellPawn is a Level 2 Pawn piece belonging to the Hellspawn race.
 // - The HellPawn has the movement and capture abilities of a pawn.
 //   It moves forward one square but has the option to move two squares on its first move.
 // - It captures diagonally one square ahead, under specific conditions.
-// - HellPawn has the special capture ability, that when it captures a non-pawn piece,
+// - HellPawn has the special infect ability, that when it captures a non-pawn piece,
 //   it becomes a copy of that piece in its own allied color.
 // - Currently does not contain logic for a Pawn promotion.
 // - Inherits functionality from the Piece class.
@@ -24,19 +26,39 @@
 // Usage or Context:
 // - This file implements the movement and interaction logic specific to the HellPawn piece.
 
-#include "hellPawn.h"
+#include "king.h"
+#include "hellKing.h"
 #include "queen.h"
+#include "queenOfIllusions.h"
+#include "queenOfBones.h"
+#include "queenOfDomination.h"
+#include "queenOfDestruction.h"
 #include "rook.h"
 #include "pawn.h"
+#include "pawnHopper.h"
 #include "bishop.h"
 #include "knight.h"
 #include "wizard.h"
 #include "necromancer.h"
 #include "beastKnight.h"
+#include "ghostKnight.h"
+#include "beastDruid.h"
+#include "necroPawn.h"
 #include "boulderThrower.h"
+#include "beholder.h"
+#include "deadLauncher.h"
 #include "howler.h"
+#include "portal.h"
+#include "familiar.h"
 #include "prowler.h"
+#include "hellPawn.h"
+#include "youngWiz.h"
+#include "ghoulKing.h"
+#include "wizardKing.h"
+#include "frogKing.h"
 #include "utility.h"
+#include "pieceFactory.h"
+#include "textureManager.h"
 #include "globals.h"
 #include "square.h"
 #include <vector>
@@ -119,212 +141,63 @@ void HellPawn::highlightValidMoves(std::vector<std::vector<Square>> &board, cons
         board[static_cast<int>(diagonalRight.y / TILE_SIZE)][static_cast<int>(diagonalRight.x / TILE_SIZE)].setHighlight(true, sf::Color::Red);
     }
 }
-
-void HellPawn::capture(const sf::Vector2f &target, std::vector<std::unique_ptr<Piece>> &pieces)
+void HellPawn::infect(const Piece *capturedPiece, std::vector<std::unique_ptr<Piece>> &pieces, std::vector<std::vector<Square>> &board, TextureManager &textureManager)
 {
-    auto targetPieceIt = pieces.end();
-
-    // Find the target piece and check if it's an opponent piece
-    for (auto it = pieces.begin(); it != pieces.end(); ++it)
+    // Check if the captured piece is not a 'pawn' type
+    if (dynamic_cast<const Pawn *>(capturedPiece) == nullptr)
     {
-        if ((*it)->getPosition() == target && isOpponentPiece(target, pieces, getColor()))
-        {
-            targetPieceIt = it;
-            break;
-        }
-    }
+        // Get the type of the captured piece
+        std::string pieceType = capturedPiece->getType();
+        std::cout << "Converting piece of type: " << pieceType << std::endl;
 
-    // If an opponent piece is found, change its color and texture if it's a known piece type
-    if (targetPieceIt != pieces.end())
-    {
-        Piece *targetPiece = targetPieceIt->get();
-        bool isKnownPieceType = true;
+        // Determine the new piece's texture
+        std::string textureName = (getColor() == Piece::Color::White ? "White" : "Black") + pieceType;
+        sf::Texture *newTexture = textureManager.getTexture(textureName);
 
-        std::string pieceType = targetPiece->getType();
-        std::cout << "Captured piece type: " << pieceType << std::endl;
+        if (!newTexture)
+        {
+            std::cerr << "Failed to get texture for: " << textureName << std::endl;
+            return;
+        }
 
-        if (pieceType == "Rook")
+        // Create a new piece with the same type and updated texture
+        auto it = std::find_if(pieces.begin(), pieces.end(), [&](const std::unique_ptr<Piece> &piece)
+                               { return piece.get() == capturedPiece; });
+
+        if (it != pieces.end())
         {
-            Rook *rook = dynamic_cast<Rook *>(targetPiece);
-            if (rook)
+            // Get the position and color of the captured piece
+            sf::Vector2f position = capturedPiece->getPosition();
+            Piece::Color color = this->getColor();
+
+            // Create a new piece of the same type as the captured piece
+            std::unique_ptr<Piece> newPiece = createPiece(pieceType, textureManager, position, color);
+
+            if (newPiece)
             {
-                rook->setColor(this->getColor());
-                sf::Texture &newTexture = getRookTexture();
-                rook->setTexture(newTexture);
-                std::cout << "Assigned Rook texture" << std::endl;
+                newPiece->setTexture(*newTexture);
+                newPiece->setColor(color);
+
+                // Replace the captured piece with the new piece in the vector
+                (*it) = std::move(newPiece);
+
+                // Erase the HellPawn that performed the capturing
+                toBeRemoved = true;
+                std::cout << "Converted and replaced piece of type: " << pieceType << std::endl;
             }
-        }
-        else if (pieceType == "Knight")
-        {
-            Knight *knight = dynamic_cast<Knight *>(targetPiece);
-            if (knight)
+            else
             {
-                knight->setColor(this->getColor());
-                sf::Texture &newTexture = getKnightTexture();
-                knight->setTexture(newTexture);
-                std::cout << "Assigned Knight texture" << std::endl;
-            }
-        }
-        else if (pieceType == "Bishop")
-        {
-            Bishop *bishop = dynamic_cast<Bishop *>(targetPiece);
-            if (bishop)
-            {
-                bishop->setColor(this->getColor());
-                sf::Texture &newTexture = getBishopTexture();
-                bishop->setTexture(newTexture);
-                std::cout << "Assigned Bishop texture" << std::endl;
-            }
-        }
-        else if (pieceType == "Queen")
-        {
-            Queen *queen = dynamic_cast<Queen *>(targetPiece);
-            if (queen)
-            {
-                queen->setColor(this->getColor());
-                sf::Texture &newTexture = getQueenTexture();
-                queen->setTexture(newTexture);
-                std::cout << "Assigned Queen texture" << std::endl;
-            }
-        }
-        else if (pieceType == "BeastKnight")
-        {
-            BeastKnight *beastKnight = dynamic_cast<BeastKnight *>(targetPiece);
-            if (beastKnight)
-            {
-                beastKnight->setColor(this->getColor());
-                sf::Texture &newTexture = getBeastKnightTexture();
-                beastKnight->setTexture(newTexture);
-                std::cout << "Assigned BeastKnight texture" << std::endl;
-            }
-        }
-        else if (pieceType == "BoulderThrower")
-        {
-            BoulderThrower *boulderThrower = dynamic_cast<BoulderThrower *>(targetPiece);
-            if (boulderThrower)
-            {
-                boulderThrower->setColor(this->getColor());
-                sf::Texture &newTexture = getBoulderThrowerTexture();
-                boulderThrower->setTexture(newTexture);
-                std::cout << "Assigned BoulderThrower texture" << std::endl;
-            }
-        }
-        else if (pieceType == "Howler")
-        {
-            Howler *howler = dynamic_cast<Howler *>(targetPiece);
-            if (howler)
-            {
-                howler->setColor(this->getColor());
-                sf::Texture &newTexture = getHowlerTexture();
-                howler->setTexture(newTexture);
-                std::cout << "Assigned Howler texture" << std::endl;
-            }
-        }
-        else if (pieceType == "Prowler")
-        {
-            Prowler *prowler = dynamic_cast<Prowler *>(targetPiece);
-            if (prowler)
-            {
-                prowler->setColor(this->getColor());
-                sf::Texture &newTexture = getProwlerTexture();
-                prowler->setTexture(newTexture);
-                std::cout << "Assigned Prowler texture" << std::endl;
-            }
-        }
-        else if (pieceType == "Necromancer")
-        {
-            Necromancer *necromancer = dynamic_cast<Necromancer *>(targetPiece);
-            if (necromancer)
-            {
-                necromancer->setColor(this->getColor());
-                sf::Texture &newTexture = getNecromancerTexture();
-                necromancer->setTexture(newTexture);
-                std::cout << "Assigned Necromancer texture" << std::endl;
-            }
-        }
-        else if (pieceType == "Wizard")
-        {
-            Wizard *wizard = dynamic_cast<Wizard *>(targetPiece);
-            if (wizard)
-            {
-                wizard->setColor(this->getColor());
-                sf::Texture &newTexture = getWizardTexture();
-                wizard->setTexture(newTexture);
-                std::cout << "Assigned Wizard texture" << std::endl;
+                std::cerr << "Failed to create new piece for type: " << pieceType << std::endl;
             }
         }
         else
         {
-            isKnownPieceType = false;
-            // Regular capture
-            auto it = std::remove_if(pieces.begin(), pieces.end(),
-                                     [&](const std::unique_ptr<Piece> &piece)
-                                     {
-                                         return piece->getPosition() == target && piece->getColor() != getColor();
-                                     });
-            pieces.erase(it, pieces.end());
-            setPosition(target);
-            std::cout << "Captured and removed regular piece" << std::endl;
-        }
-
-        // Mark this HellPawn instance for removal after the capture operation
-        if (isKnownPieceType)
-        {
-            toBeRemoved = true;
+            std::cerr << "Captured piece not found in pieces vector!" << std::endl;
         }
     }
     else
     {
-        std::cerr << "No opponent piece found at the target position!" << std::endl;
+        // Capture a pawn regularly
+        this->capture(capturedPiece->getPosition(), pieces);
     }
-}
-
-sf::Texture &HellPawn::getRookTexture() const
-{
-    return (getColor() == Piece::Color::White) ? whiteRookTexture : blackRookTexture;
-}
-
-sf::Texture &HellPawn::getKnightTexture() const
-{
-    return (getColor() == Piece::Color::White) ? whiteKnightTexture : blackKnightTexture;
-}
-
-sf::Texture &HellPawn::getBishopTexture() const
-{
-    return (getColor() == Piece::Color::White) ? whiteBishopTexture : blackBishopTexture;
-}
-
-sf::Texture &HellPawn::getQueenTexture() const
-{
-    return (getColor() == Piece::Color::White) ? whiteQueenTexture : blackQueenTexture;
-}
-
-sf::Texture &HellPawn::getBeastKnightTexture() const
-{
-    return (getColor() == Piece::Color::White) ? whiteBeastKnightTexture : blackBeastKnightTexture;
-}
-
-sf::Texture &HellPawn::getBoulderThrowerTexture() const
-{
-    return (getColor() == Piece::Color::White) ? whiteBoulderThrowerTexture : blackBoulderThrowerTexture;
-}
-
-sf::Texture &HellPawn::getHowlerTexture() const
-{
-    return (getColor() == Piece::Color::White) ? whiteHowlerTexture : blackHowlerTexture;
-}
-
-sf::Texture &HellPawn::getProwlerTexture() const
-{
-    return (getColor() == Piece::Color::White) ? whiteProwlerTexture : blackProwlerTexture;
-}
-
-sf::Texture &HellPawn::getWizardTexture() const
-{
-    return (getColor() == Piece::Color::White) ? whiteWizardTexture : blackWizardTexture;
-}
-
-sf::Texture &HellPawn::getNecromancerTexture() const
-{
-    return (getColor() == Piece::Color::White) ? whiteNecromancerTexture : blackNecromancerTexture;
 }

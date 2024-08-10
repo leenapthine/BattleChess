@@ -14,6 +14,11 @@ public:
     void highlightValidMoves(std::vector<std::vector<Square>> &board, const std::vector<std::unique_ptr<Piece>> &pieces) const override;
 
     std::string getType() const override { return "Knight"; }
+
+    std::unique_ptr<Piece> clone() const override
+    {
+        return std::make_unique<Knight>(*this);
+    }
 };
 
 #endif // KNIGHT_H

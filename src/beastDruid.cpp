@@ -100,11 +100,7 @@ void BeastDruid::highlightValidMoves(std::vector<std::vector<Square>> &board, co
                         {currentPosition.x, currentPosition.y + TILE_SIZE},
                         {currentPosition.x, currentPosition.y - TILE_SIZE},
                         {currentPosition.x - TILE_SIZE, currentPosition.y},
-                        {currentPosition.x - TILE_SIZE, currentPosition.y - TILE_SIZE},
-                        {currentPosition.x - TILE_SIZE, currentPosition.y + TILE_SIZE},
-                        {currentPosition.x + TILE_SIZE, currentPosition.y},
-                        {currentPosition.x + TILE_SIZE, currentPosition.y + TILE_SIZE},
-                        {currentPosition.x + TILE_SIZE, currentPosition.y - TILE_SIZE}};
+                        {currentPosition.x + TILE_SIZE, currentPosition.y}};
 
                     for (const auto &move : moves)
                     {
