@@ -35,13 +35,18 @@ First, clone the repository to your local machine:
 git clone https://github.com/NeddTheRedd/BattleChess
 
 ### In the Terminal
-- cd BattleChess
-- cd build
-- cmake ..
-- make
+```bash
+cd BattleChess
+cd build
+cmake ..
+make
+```
 
 ### Run the Game
+
+```bash
 ./ChessGUI
+```
 
 ## Contents
 <a name="Cont"></a>
