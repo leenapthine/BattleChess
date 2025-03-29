@@ -7,8 +7,8 @@
 class Beholder : public Piece
 {
 public:
-    Beholder(sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
-        : Piece(texture, initialPosition, color) {}
+    Beholder(int id, sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
+        : Piece(id, texture, initialPosition, color) {}
 
     std::unique_ptr<Piece> clone() const override
     {

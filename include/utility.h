@@ -13,10 +13,10 @@
 #include <memory>
 
 // Type for the piece creation function
-using PieceFactory = std::function<std::unique_ptr<Piece>(sf::Texture &, const sf::Vector2f &, Piece::Color)>;
+using PieceFactory = std::function<std::unique_ptr<Piece>(int &, sf::Texture &, const sf::Vector2f &, Piece::Color)>;
 
 // Function to create a piece using the type name
-std::unique_ptr<Piece> createPiece(const std::string &type, sf::Texture &texture, const sf::Vector2f &position, Piece::Color color);
+// std::unique_ptr<Piece> createPiece(int id, const std::string &type, sf::Texture &texture, const sf::Vector2f &position, Piece::Color color);
 
 bool isPathClear(const sf::Vector2f &start, const sf::Vector2f &end, const std::vector<std::unique_ptr<Piece>> &pieces);
 

@@ -7,8 +7,8 @@
 class Portal : public Piece
 {
 public:
-    Portal(sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
-        : Piece(texture, initialPosition, color) {}
+    Portal(int id, sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
+        : Piece(id, texture, initialPosition, color) {}
 
     bool canMoveTo(const sf::Vector2f &target, const std::vector<std::unique_ptr<Piece>> &pieces) const override;
 

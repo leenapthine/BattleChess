@@ -6,8 +6,8 @@
 class Queen : public Piece
 {
 public:
-    Queen(sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
-        : Piece(texture, initialPosition, color) {}
+    Queen(int id, sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
+        : Piece(id, texture, initialPosition, color) {}
 
     std::unique_ptr<Piece> clone() const override
     {

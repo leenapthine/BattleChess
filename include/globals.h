@@ -9,6 +9,11 @@ extern const int TILE_SIZE;
 extern const int WINDOW_WIDTH;
 extern const int BUTTON_SIZE;
 extern const int BUTTON_SPACING;
+extern bool isPlayerWhite;
+
+// iterator
+extern int currentID;
+int getNextID();
 
 extern sf::Texture whiteRookTexture;
 extern sf::Texture blackRookTexture;

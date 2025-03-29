@@ -8,8 +8,8 @@
 class Howler : public Piece
 {
 public:
-    Howler(sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
-        : Piece(texture, initialPosition, color),
+    Howler(int id, sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
+        : Piece(id, texture, initialPosition, color),
           bishopAbilities(false),
           rookAbilities(false),
           knightAbilities(false),

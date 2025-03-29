@@ -6,8 +6,8 @@
 class King : public Piece
 {
 public:
-    King(sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
-        : Piece(texture, initialPosition, color) {}
+    King(int id, sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
+        : Piece(id, texture, initialPosition, color) {}
 
     bool canMoveTo(const sf::Vector2f &target, const std::vector<std::unique_ptr<Piece>> &pieces) const override;
 

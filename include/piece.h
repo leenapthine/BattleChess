@@ -22,10 +22,17 @@ public:
     };
 
     // Constructor that initializes the piece with a texture, initial position, and color. Sets the sprite's position.
-    Piece(const sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
-        : texture(texture), sprite(texture), position(initialPosition), color(color)
+    Piece(int id, const sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
+        : id(id), texture(texture), sprite(texture), position(initialPosition), color(color)
     {
         sprite.setPosition(position);
+    }
+
+    bool operator!=(const Piece &other) const
+    {
+        return (this->getType() != other.getType() ||
+                this->getPosition() != other.getPosition() ||
+                this->getColor() != other.getColor());
     }
 
     // Virtual destructor to ensure proper cleanup of derived classes.
@@ -34,6 +41,9 @@ public:
 
     // Virtual function to get the type of the piece.
     virtual std::string getType() const = 0;
+
+    // return id
+    int getId() const { return id; }
 
     // Returns a reference to the piece's sprite for rendering or modification.
     sf::Sprite &getSprite() { return sprite; }
@@ -96,6 +106,8 @@ public:
 
     bool isStunned() const { return stunned; }
     void setStunned(bool value) { stunned = value; }
+    bool isStone() const { return stone; }
+    void setStone(bool value) { stone = value; }
 
 protected:
     sf::Texture texture;
@@ -103,6 +115,8 @@ protected:
     sf::Vector2f position;
     Color color;
     bool stunned = false;
+    bool stone = false;
+    int id;
 };
 
 // Declare operator<< for Piece outside the class

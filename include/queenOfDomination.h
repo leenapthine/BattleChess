@@ -9,8 +9,8 @@
 class QueenOfDomination : public Piece
 {
 public:
-    QueenOfDomination(const sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
-        : Piece(texture, initialPosition, color), abilityUsed(false), highlightsActive(false) {}
+    QueenOfDomination(int id, sf::Texture &texture, const sf::Vector2f &initialPosition, Color color)
+        : Piece(id, texture, initialPosition, color), abilityUsed(false), highlightsActive(false) {}
 
     bool canMoveTo(const sf::Vector2f &target, const std::vector<std::unique_ptr<Piece>> &pieces) const override;
 
@@ -37,6 +37,7 @@ public:
     mutable std::string originalType = "None";
     mutable Piece::Color originalColor = color;
     mutable sf::Texture *originalTexture = nullptr;
+    mutable int originalID;
 
 private:
     mutable bool abilityUsed;      // Track whether the ability has been used

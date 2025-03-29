@@ -41,11 +41,11 @@ class FrogKing;
 class HellKing;
 
 // Define a factory function type
-using PieceFactory = std::function<std::unique_ptr<Piece>(sf::Texture &, const sf::Vector2f &, Piece::Color)>;
+using PieceFactory = std::function<std::unique_ptr<Piece>(int &, sf::Texture &, const sf::Vector2f &, Piece::Color)>;
 
 // Declare the map of piece types to factory functions
 extern std::unordered_map<std::string, PieceFactory> pieceFactoryMap;
 
-std::unique_ptr<Piece> createPiece(const std::string &type, TextureManager &textureManager, const sf::Vector2f &position, Piece::Color color);
+std::unique_ptr<Piece> createPiece(int id, const std::string &type, TextureManager &textureManager, const sf::Vector2f &position, Piece::Color color);
 
 #endif // PIECE_FACTORY_H
