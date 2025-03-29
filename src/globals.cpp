@@ -8,6 +8,15 @@ const int TILE_SIZE = 80;
 const int WINDOW_WIDTH = BOARD_SIZE * TILE_SIZE;
 const int BUTTON_SIZE = 50;
 const int BUTTON_SPACING = 10;
+bool isPlayerWhite = true;
+
+// iterator
+int currentID = 0;
+
+int getNextID()
+{
+    return currentID++;
+}
 
 sf::Texture whiteRookTexture;
 sf::Texture blackRookTexture;

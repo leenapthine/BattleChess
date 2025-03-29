@@ -84,8 +84,11 @@ void Familiar::highlightValidMoves(std::vector<std::vector<Square>> &board, cons
     }
 };
 
+/*
 // Set Familiars stone value: "Turn to Stone"
 void Familiar::setStone(bool value)
 {
     stone = value;
 }
+
+*/

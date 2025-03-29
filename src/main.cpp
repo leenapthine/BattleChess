@@ -1,6 +1,8 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Network.hpp>
 #include "menu.h"
 #include "game.h"
+#include "network.h"
 #include <iostream>
 #include <vector>
 
@@ -15,6 +17,11 @@ int main()
         return -1;
     }
 
+    // network operations
+    std::unique_ptr<sf::TcpSocket> socket = initialConnect();
+
+    std::cout << "Finished initialConnect" << std::endl;
+
     bool inMainMenu = true;
 
     while (window.isOpen())
@@ -26,7 +33,7 @@ int main()
         else
         {
             Game game;
-            game.runChessGame(window);
+            game.runChessGame(window, socket);
         }
     }
 

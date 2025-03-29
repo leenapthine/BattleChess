@@ -190,39 +190,104 @@ void createPieces(TextureManager &textureManager, std::vector<std::unique_ptr<Pi
     pieces.clear();
 
     // Add new pieces to the pieces vector
-    pieces.push_back(std::make_unique<DeadLauncher>(*textureManager.getTexture("WhiteDeadLauncher"), sf::Vector2f(0, 0), Piece::Color::White));
-    pieces.push_back(std::make_unique<Portal>(*textureManager.getTexture("BlackPortal"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 1), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Portal>(*textureManager.getTexture("BlackPortal"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 1), TILE_SIZE * (BOARD_SIZE - 5)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Beholder>(*textureManager.getTexture("WhiteBeholder"), sf::Vector2f(560, 0), Piece::Color::White));
-    pieces.push_back(std::make_unique<BoulderThrower>(*textureManager.getTexture("BlackBoulderThrower"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 8), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Howler>(*textureManager.getTexture("WhiteHowler"), sf::Vector2f(160, 0), Piece::Color::White));
-    pieces.push_back(std::make_unique<BeastDruid>(*textureManager.getTexture("BlackBeastDruid"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 3), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Wizard>(*textureManager.getTexture("WhiteWizard"), sf::Vector2f(400, 0), Piece::Color::White));
-    pieces.push_back(std::make_unique<Necromancer>(*textureManager.getTexture("BlackNecromancer"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 6), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Prowler>(*textureManager.getTexture("WhiteProwler"), sf::Vector2f(80, 0), Piece::Color::White));
-    pieces.push_back(std::make_unique<Familiar>(*textureManager.getTexture("BlackFamiliar"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 2), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<GhostKnight>(*textureManager.getTexture("WhiteGhostKnight"), sf::Vector2f(480, 0), Piece::Color::White));
-    pieces.push_back(std::make_unique<BeastKnight>(*textureManager.getTexture("BlackBeastKnight"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 7), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Pawn>(*textureManager.getTexture("WhitePawn"), sf::Vector2f(0, 80), Piece::Color::White));
-    pieces.push_back(std::make_unique<Pawn>(*textureManager.getTexture("BlackPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 1), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Pawn>(*textureManager.getTexture("WhitePawn"), sf::Vector2f(80, 80), Piece::Color::White));
-    pieces.push_back(std::make_unique<HellPawn>(*textureManager.getTexture("BlackHellPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 2), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<HellPawn>(*textureManager.getTexture("WhiteHellPawn"), sf::Vector2f(160, 80), Piece::Color::White));
-    pieces.push_back(std::make_unique<Pawn>(*textureManager.getTexture("BlackPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 3), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Pawn>(*textureManager.getTexture("WhitePawn"), sf::Vector2f(240, 80), Piece::Color::White));
-    pieces.push_back(std::make_unique<PawnHopper>(*textureManager.getTexture("BlackPawnHopper"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 4), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<NecroPawn>(*textureManager.getTexture("WhiteNecroPawn"), sf::Vector2f(320, 80), Piece::Color::White));
-    pieces.push_back(std::make_unique<NecroPawn>(*textureManager.getTexture("BlackNecroPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 5), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Pawn>(*textureManager.getTexture("WhitePawn"), sf::Vector2f(400, 80), Piece::Color::White));
-    pieces.push_back(std::make_unique<Pawn>(*textureManager.getTexture("BlackPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 6), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<Pawn>(*textureManager.getTexture("WhitePawn"), sf::Vector2f(480, 80), Piece::Color::White));
-    pieces.push_back(std::make_unique<Pawn>(*textureManager.getTexture("BlackPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 7), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<YoungWiz>(*textureManager.getTexture("WhiteYoungWiz"), sf::Vector2f(560, 80), Piece::Color::White));
-    pieces.push_back(std::make_unique<Pawn>(*textureManager.getTexture("BlackPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 8), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<WizardKing>(*textureManager.getTexture("WhiteWizardKing"), sf::Vector2f(240, 0), Piece::Color::White));
-    pieces.push_back(std::make_unique<HellKing>(*textureManager.getTexture("BlackHellKing"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 5), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
-    pieces.push_back(std::make_unique<QueenOfDestruction>(*textureManager.getTexture("WhiteQueenOfDestruction"), sf::Vector2f(320, 0), Piece::Color::White));
-    pieces.push_back(std::make_unique<QueenOfDomination>(*textureManager.getTexture("BlackQueenOfDomination"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 4), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
+    int id = getNextID();
+    pieces.push_back(std::make_unique<DeadLauncher>(id, *textureManager.getTexture("WhiteDeadLauncher"), sf::Vector2f(0, 0), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Portal>(id, *textureManager.getTexture("BlackPortal"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 1), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Portal>(id, *textureManager.getTexture("BlackPortal"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 1), TILE_SIZE * (BOARD_SIZE - 5)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Beholder>(id, *textureManager.getTexture("WhiteBeholder"), sf::Vector2f(560, 0), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<BoulderThrower>(id, *textureManager.getTexture("BlackBoulderThrower"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 8), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Howler>(id, *textureManager.getTexture("WhiteHowler"), sf::Vector2f(160, 0), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<BeastDruid>(id, *textureManager.getTexture("BlackBeastDruid"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 3), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Wizard>(id, *textureManager.getTexture("WhiteWizard"), sf::Vector2f(400, 0), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Necromancer>(id, *textureManager.getTexture("BlackNecromancer"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 6), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Prowler>(id, *textureManager.getTexture("WhiteProwler"), sf::Vector2f(80, 0), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Familiar>(id, *textureManager.getTexture("BlackFamiliar"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 2), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<GhostKnight>(id, *textureManager.getTexture("WhiteGhostKnight"), sf::Vector2f(480, 0), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<BeastKnight>(id, *textureManager.getTexture("BlackBeastKnight"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 7), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Pawn>(id, *textureManager.getTexture("WhitePawn"), sf::Vector2f(0, 80), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Pawn>(id, *textureManager.getTexture("BlackPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 1), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Pawn>(id, *textureManager.getTexture("WhitePawn"), sf::Vector2f(80, 80), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<HellPawn>(id, *textureManager.getTexture("BlackHellPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 2), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<HellPawn>(id, *textureManager.getTexture("WhiteHellPawn"), sf::Vector2f(160, 80), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Pawn>(id, *textureManager.getTexture("BlackPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 3), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Pawn>(id, *textureManager.getTexture("WhitePawn"), sf::Vector2f(240, 80), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<PawnHopper>(id, *textureManager.getTexture("BlackPawnHopper"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 4), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<NecroPawn>(id, *textureManager.getTexture("WhiteNecroPawn"), sf::Vector2f(320, 80), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<NecroPawn>(id, *textureManager.getTexture("BlackNecroPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 5), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Pawn>(id, *textureManager.getTexture("WhitePawn"), sf::Vector2f(400, 80), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Pawn>(id, *textureManager.getTexture("BlackPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 6), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Pawn>(id, *textureManager.getTexture("WhitePawn"), sf::Vector2f(480, 80), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Pawn>(id, *textureManager.getTexture("BlackPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 7), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<YoungWiz>(id, *textureManager.getTexture("WhiteYoungWiz"), sf::Vector2f(560, 80), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<Pawn>(id, *textureManager.getTexture("BlackPawn"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 8), TILE_SIZE * (BOARD_SIZE - 2)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<GhoulKing>(id, *textureManager.getTexture("WhiteGhoulKing"), sf::Vector2f(240, 0), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<FrogKing>(id, *textureManager.getTexture("BlackFrogKing"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 5), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<QueenOfBones>(id, *textureManager.getTexture("WhiteQueenOfBones"), sf::Vector2f(320, 0), Piece::Color::White));
+
+    id = getNextID();
+    pieces.push_back(std::make_unique<QueenOfIllusions>(id, *textureManager.getTexture("BlackQueenOfIllusions"), sf::Vector2f(TILE_SIZE * (BOARD_SIZE - 4), TILE_SIZE * (BOARD_SIZE - 1)), Piece::Color::Black));
 
     float scaleFactor = TILE_SIZE / static_cast<float>(std::max(textureManager.getTexture("WhiteRook")->getSize().x, textureManager.getTexture("WhiteRook")->getSize().y));
 
@@ -243,7 +308,8 @@ void createPieces(TextureManager &textureManager, std::vector<std::unique_ptr<Pi
  */
 void pushPawn(std::vector<std::unique_ptr<Piece>> &pieces, sf::Texture &pawnTexture, const sf::Vector2f &position, Piece::Color pieceColor)
 {
-    auto pawn = std::make_unique<Pawn>(pawnTexture, position, pieceColor);
+    int id = getNextID();
+    auto pawn = std::make_unique<Pawn>(id, pawnTexture, position, pieceColor);
     pawn->getSprite().setScale(static_cast<float>(TILE_SIZE) / pawnTexture.getSize().x, static_cast<float>(TILE_SIZE) / pawnTexture.getSize().y);
     pieces.push_back(std::move(pawn));
 }
@@ -258,7 +324,8 @@ void pushPawn(std::vector<std::unique_ptr<Piece>> &pieces, sf::Texture &pawnText
  */
 void pushNecroPawn(std::vector<std::unique_ptr<Piece>> &pieces, sf::Texture &necroPawnTexture, const sf::Vector2f &position, Piece::Color pieceColor)
 {
-    auto necroPawn = std::make_unique<NecroPawn>(necroPawnTexture, position, pieceColor);
+    int id = getNextID();
+    auto necroPawn = std::make_unique<NecroPawn>(id, necroPawnTexture, position, pieceColor);
     necroPawn->getSprite().setScale(static_cast<float>(TILE_SIZE) / necroPawnTexture.getSize().x, static_cast<float>(TILE_SIZE) / necroPawnTexture.getSize().y);
 
     pieces.push_back(std::move(necroPawn));

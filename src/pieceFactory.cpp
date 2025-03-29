@@ -33,128 +33,128 @@
 
 // Define the map of piece types to factory functions
 std::unordered_map<std::string, PieceFactory> pieceFactoryMap = {
-    {"Rook", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Rook", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Rook>(texture, pos, color);
+         return std::make_unique<Rook>(id, texture, pos, color);
      }},
-    {"Bishop", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Bishop", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Bishop>(texture, pos, color);
+         return std::make_unique<Bishop>(id, texture, pos, color);
      }},
-    {"Knight", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Knight", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Knight>(texture, pos, color);
+         return std::make_unique<Knight>(id, texture, pos, color);
      }},
-    {"Pawn", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Pawn", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Pawn>(texture, pos, color);
+         return std::make_unique<Pawn>(id, texture, pos, color);
      }},
-    {"Queen", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Queen", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Queen>(texture, pos, color);
+         return std::make_unique<Queen>(id, texture, pos, color);
      }},
-    {"King", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"King", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<King>(texture, pos, color);
+         return std::make_unique<King>(id, texture, pos, color);
      }},
-    {"NecroPawn", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"NecroPawn", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<NecroPawn>(texture, pos, color);
+         return std::make_unique<NecroPawn>(id, texture, pos, color);
      }},
-    {"Necromancer", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Necromancer", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Necromancer>(texture, pos, color);
+         return std::make_unique<Necromancer>(id, texture, pos, color);
      }},
-    {"GhostKnight", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"GhostKnight", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<GhostKnight>(texture, pos, color);
+         return std::make_unique<GhostKnight>(id, texture, pos, color);
      }},
-    {"DeadLauncher", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"DeadLauncher", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<DeadLauncher>(texture, pos, color);
+         return std::make_unique<DeadLauncher>(id, texture, pos, color);
      }},
-    {"HellPawn", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"HellPawn", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<HellPawn>(texture, pos, color);
+         return std::make_unique<HellPawn>(id, texture, pos, color);
      }},
-    {"Howler", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Howler", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Howler>(texture, pos, color);
+         return std::make_unique<Howler>(id, texture, pos, color);
      }},
-    {"Prowler", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Prowler", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Prowler>(texture, pos, color);
+         return std::make_unique<Prowler>(id, texture, pos, color);
      }},
-    {"Beholder", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Beholder", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Beholder>(texture, pos, color);
+         return std::make_unique<Beholder>(id, texture, pos, color);
      }},
-    {"YoungWiz", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"YoungWiz", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<YoungWiz>(texture, pos, color);
+         return std::make_unique<YoungWiz>(id, texture, pos, color);
      }},
-    {"Wizard", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Wizard", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Wizard>(texture, pos, color);
+         return std::make_unique<Wizard>(id, texture, pos, color);
      }},
-    {"Familiar", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Familiar", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Familiar>(texture, pos, color);
+         return std::make_unique<Familiar>(id, texture, pos, color);
      }},
-    {"Portal", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"Portal", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<Portal>(texture, pos, color);
+         return std::make_unique<Portal>(id, texture, pos, color);
      }},
-    {"PawnHopper", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"PawnHopper", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<PawnHopper>(texture, pos, color);
+         return std::make_unique<PawnHopper>(id, texture, pos, color);
      }},
-    {"BeastKnight", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"BeastKnight", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<BeastKnight>(texture, pos, color);
+         return std::make_unique<BeastKnight>(id, texture, pos, color);
      }},
-    {"BeastDruid", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"BeastDruid", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<BeastDruid>(texture, pos, color);
+         return std::make_unique<BeastDruid>(id, texture, pos, color);
      }},
-    {"BoulderThrower", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"BoulderThrower", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<BoulderThrower>(texture, pos, color);
+         return std::make_unique<BoulderThrower>(id, texture, pos, color);
      }},
-    {"QueenOfIllusions", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"QueenOfIllusions", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<QueenOfIllusions>(texture, pos, color);
+         return std::make_unique<QueenOfIllusions>(id, texture, pos, color);
      }},
-    {"QueenOfBones", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"QueenOfBones", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<QueenOfBones>(texture, pos, color);
+         return std::make_unique<QueenOfBones>(id, texture, pos, color);
      }},
-    {"QueenOfDomination", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"QueenOfDomination", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<QueenOfDomination>(texture, pos, color);
+         return std::make_unique<QueenOfDomination>(id, texture, pos, color);
      }},
-    {"QueenOfDestruction", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"QueenOfDestruction", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<QueenOfDestruction>(texture, pos, color);
+         return std::make_unique<QueenOfDestruction>(id, texture, pos, color);
      }},
-    {"GhoulKing", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"GhoulKing", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<GhoulKing>(texture, pos, color);
+         return std::make_unique<GhoulKing>(id, texture, pos, color);
      }},
-    {"WizardKing", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"WizardKing", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<WizardKing>(texture, pos, color);
+         return std::make_unique<WizardKing>(id, texture, pos, color);
      }},
-    {"FrogKing", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"FrogKing", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<FrogKing>(texture, pos, color);
+         return std::make_unique<FrogKing>(id, texture, pos, color);
      }},
-    {"HellKing", [](sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
+    {"HellKing", [](int id, sf::Texture &texture, const sf::Vector2f &pos, Piece::Color color)
      {
-         return std::make_unique<HellKing>(texture, pos, color);
+         return std::make_unique<HellKing>(id, texture, pos, color);
      }}};
 
-std::unique_ptr<Piece> createPiece(const std::string &type, TextureManager &textureManager, const sf::Vector2f &position, Piece::Color color)
+std::unique_ptr<Piece> createPiece(int id, const std::string &type, TextureManager &textureManager, const sf::Vector2f &position, Piece::Color color)
 {
     std::string textureName = (color == Piece::Color::White ? "White" : "Black") + type;
     sf::Texture *texture = textureManager.getTexture(textureName);
@@ -171,7 +171,7 @@ std::unique_ptr<Piece> createPiece(const std::string &type, TextureManager &text
     if (it != pieceFactoryMap.end())
     {
         // Create the piece using the factory function
-        auto piece = it->second(*texture, position, color);
+        auto piece = it->second(id, *texture, position, color);
 
         if (!piece)
         {

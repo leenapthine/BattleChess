@@ -79,7 +79,7 @@ void GhoulKing::highlightValidMoves(std::vector<std::vector<Square>> &board, con
 // Place a pawn piece in a selected adjacent square
 bool GhoulKing::raiseNecroPawn(const sf::Vector2f &targetPosition, std::vector<std::vector<Square>> &board, std::vector<std::unique_ptr<Piece>> &pieces, TextureManager &textureManager)
 {
-    raisedDead = true;
+    // raisedDead = true;
     bool awaitingNecroPawnPlacement = false;
     const sf::Texture &pawnTexture = getNecroPawnTexture(textureManager);
 

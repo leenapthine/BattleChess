@@ -195,7 +195,7 @@ void QueenOfBones::respawnAtOriginalPosition(std::vector<std::unique_ptr<Piece>>
         }
 
         // Create a new QueenOfBones and add it to the pieces vector
-        pieces.push_back(std::make_unique<QueenOfBones>(*queenTexture, respawnPosition, getColor()));
+        pieces.push_back(std::make_unique<QueenOfBones>(this->getId(), *queenTexture, respawnPosition, getColor()));
 
         // Scale each piece's sprite to fit the tile size
         float scaleFactor = TILE_SIZE / static_cast<float>(std::max(queenTexture->getSize().x, queenTexture->getSize().y));

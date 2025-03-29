@@ -218,12 +218,13 @@ void QueenOfDomination::applyDominationAbility(Piece *targetPiece, std::vector<s
     }
 
     // Store the original type and position of the target piece
+    originalID = targetPiece->getId();
     originalType = targetPiece->getType();
     sf::Vector2f originalPosition = targetPiece->getPosition();
 
     // Retrieve the original texture from the TextureManager
     std::string textureName = (originalColor == Piece::Color::White) ? "White" + originalType : "Black" + originalType;
-    const sf::Texture *originalTexture = textureManager.getTexture(textureName);
+    sf::Texture *originalTexture = textureManager.getTexture(textureName);
 
     if (!originalTexture)
     {
@@ -232,7 +233,7 @@ void QueenOfDomination::applyDominationAbility(Piece *targetPiece, std::vector<s
     }
 
     // Create a new QueenOfDomination with the original texture
-    auto tempQueen = std::make_unique<QueenOfDomination>(*originalTexture, originalPosition, originalColor);
+    auto tempQueen = std::make_unique<QueenOfDomination>(originalID, *originalTexture, originalPosition, originalColor);
 
     // Disable the ability for the newly created queen
     tempQueen->abilityUsed = true;
@@ -294,7 +295,7 @@ void QueenOfDomination::returnOriginalSprite(std::vector<std::unique_ptr<Piece>>
     }
 
     // Use the createPiece function to create the original piece
-    auto originalPiece = createPiece(originalType, textureManager, getPosition(), originalColor);
+    auto originalPiece = createPiece(originalID, originalType, textureManager, getPosition(), originalColor);
     if (!originalPiece)
     {
         std::cerr << "Failed to create original piece." << std::endl;

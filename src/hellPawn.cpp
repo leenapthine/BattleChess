@@ -171,7 +171,8 @@ void HellPawn::infect(const Piece *capturedPiece, std::vector<std::unique_ptr<Pi
             Piece::Color color = this->getColor();
 
             // Create a new piece of the same type as the captured piece
-            std::unique_ptr<Piece> newPiece = createPiece(pieceType, textureManager, position, color);
+            int id = getNextID();
+            std::unique_ptr<Piece> newPiece = createPiece(id, pieceType, textureManager, position, color);
 
             if (newPiece)
             {
