@@ -8,7 +8,7 @@ The primary goal of this project was to deepen my understanding of C++ by develo
 
 Artwork and design we're handled on my own and are harken back to the dungeon pixel aesthestic of the eighties. I will likely circle back on it in the future.
 
-It was later further developed for the web using JavaScript, SolidJS, PixiJS, and Django. For that project, head [here](https://github.com/leenapthine/BattleChess-web) or try the game at: [www.battle-chess-web.vercel.app](www.battle-chess-web.vercel.app).  
+It was later further developed for the web using JavaScript, SolidJS, PixiJS, and Django. For that project, head [here](https://github.com/leenapthine/BattleChess-web) or try the game at: https://battle-chess-web.vercel.app.  
 
 ## Table of Contents
 
